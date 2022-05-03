@@ -9,11 +9,10 @@ public class PuzzleDragDrop : MonoBehaviour
     private GameObject selectedObject;
 
     Rigidbody rb;
-
     private int correctPosition = 0;
 
     private int numberOfPieces;
-
+    
     [SerializeField]
     private GameObject successMessage;
 
@@ -38,7 +37,8 @@ public class PuzzleDragDrop : MonoBehaviour
     void Start()
     {
         numberOfPieces = brokenModel.transform.childCount;
-        var children = brokenModel.transform.root.GetComponentsInChildren<Transform>();
+        var children =
+            brokenModel.transform.root.GetComponentsInChildren<Transform>();
 
         foreach (var child in children)
         {
@@ -46,7 +46,7 @@ public class PuzzleDragDrop : MonoBehaviour
         }
 
         //for close the scene button
-        closeButton.onClick.AddListener (sceneTransition);
+        closeButton.onClick.AddListener(sceneTransition);
     }
 
     // Update is called once per frame
@@ -161,9 +161,9 @@ public class PuzzleDragDrop : MonoBehaviour
             {
                 correctPosition++;
 
-                Debug.Log (correctPosition);
+                Debug.Log(correctPosition);
 
-                Debug.Log (selectedObject);
+                Debug.Log(selectedObject);
 
                 puzzleMap[selectedObject] = true;
             }
@@ -177,8 +177,7 @@ public class PuzzleDragDrop : MonoBehaviour
         brokenModel.SetActive(false);
         completedModel.SetActive(true);
         puzzleCounterText.text = solvedPuzzles.ToString() + "/9 Solved Puzzles";
-       // sceneTransition();
-       
+        // sceneTransition();
     }
 
     private void sceneTransition()
@@ -186,6 +185,5 @@ public class PuzzleDragDrop : MonoBehaviour
         SceneManager.LoadScene("HomeScene");
     }
 
-//delay of the scene transition after a puzzle is completed
-
+    //delay of the scene transition after a puzzle is completed
 }
