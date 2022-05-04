@@ -13,7 +13,7 @@ public static class APIHelper
 
         HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://healthdata.gov/resource/8bce-qw8w.json?state=National");
         HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-        StreamReader reader = new StreamReader(response.GetResponseStream());
+        StreamReader reader = new StreamReader(response.GetResponseStream()); 
         string json = reader.ReadToEnd();
         var list_= JsonConvert.DeserializeObject<List<DataModel>>(json);
         return list_[0];
