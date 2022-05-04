@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Draggable
+  - Puzzle Scene
+  - Puzzle Scene2
   layers:
   - Default
   - TransparentFX

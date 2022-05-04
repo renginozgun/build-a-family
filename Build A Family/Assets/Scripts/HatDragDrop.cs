@@ -4,18 +4,19 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PuzzleDragDrop : MonoBehaviour
+public class HatDragDrop : MonoBehaviour
 {
     private GameObject selectedObject;
+
     Rigidbody rb;
     private int correctPosition = 0;
-    private bool isEnded = false;
 
     private int numberOfPieces;
+    private bool isEnded = false;
 
     [SerializeField]
     private GameObject puzzleBarFill;
-    
+
     [SerializeField]
     private GameObject successMessage;
 
@@ -32,11 +33,11 @@ public class PuzzleDragDrop : MonoBehaviour
     private IDictionary<GameObject, bool>
         puzzleMap = new Dictionary<GameObject, bool>();
 
-  
+   
 
     void Start()
-    {   
-       
+    {
+        
         setSolvedPuzzleText();
         numberOfPieces = brokenModel.transform.childCount;
         var children =
@@ -77,7 +78,7 @@ public class PuzzleDragDrop : MonoBehaviour
                 setObjectPosition(0f);
 
                 if (
-                    correctPosition != numberOfPieces &&
+                    correctPosition != 1 &&
                     !puzzleMap[selectedObject]
                 )
                 {
@@ -97,10 +98,10 @@ public class PuzzleDragDrop : MonoBehaviour
             setObjectPosition(.25f);
         }
 
-        if (correctPosition == numberOfPieces && !isEnded)
+        if (correctPosition == 1 && !isEnded)
         {
             PuzzleManagement.totalSolvedPuzzles++;
-            isEnded=true;
+            isEnded = true;
             Debug.Log("GAME ENDED");
             setFinalScene();
         }
@@ -146,7 +147,7 @@ public class PuzzleDragDrop : MonoBehaviour
                         .z);
             Vector3 worldPosition = Camera.main.ScreenToWorldPoint(position);
             selectedObject.transform.position =
-                new Vector3(worldPosition.x, yPos, worldPosition.z);
+                new Vector3(worldPosition.x, 0, worldPosition.z);
         }
     }
 
@@ -158,13 +159,13 @@ public class PuzzleDragDrop : MonoBehaviour
     {
         {
             if (
-                (xValue < 0.2 && xValue > -0.2) &&
-                (zValue < 0.2 && zValue > -0.2)
+                (xValue < 2 && xValue > 1) &&
+                (zValue < -0.5 && zValue > -0.9)
             )
             {
                 correctPosition++;
 
-                selectedObject.transform.localPosition = new Vector3(0,-0.125f,0);
+                selectedObject.transform.localPosition = new Vector3(1.64f, 3.7f, -0.6f);
 
                 Debug.Log(correctPosition);
 
@@ -175,6 +176,7 @@ public class PuzzleDragDrop : MonoBehaviour
                 selectedObject.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
 
             }
+
         }
     }
 
@@ -183,14 +185,21 @@ public class PuzzleDragDrop : MonoBehaviour
     {
         successMessage.SetActive(true);
         //brokenModel.SetActive(false);
-       // completedModel.SetActive(true);
+        // completedModel.SetActive(true);
+        Debug.Log("sayı");
         setSolvedPuzzleText();
 
-        Vector3 temp = puzzleBarFill.transform.localScale ;
-        temp.z=+0.06f;
-        puzzleBarFill.transform.localScale=temp;
-  
+        Vector3 temp = puzzleBarFill.transform.localScale;
+        temp.z = +0.06f;
+        puzzleBarFill.transform.localScale = temp;
+
         // sceneTransition();
+    }
+
+    private void setSolvedPuzzleText()
+    {
+        puzzleCounterText.text = PuzzleManagement.totalSolvedPuzzles.ToString() + "/9";
+
     }
 
     private void sceneTransition()
@@ -198,13 +207,5 @@ public class PuzzleDragDrop : MonoBehaviour
         PuzzleManagement.updateHomeSceneStatusBar();
         SceneManager.LoadScene("HomeScene");
     }
-    
-    private void setSolvedPuzzleText()
-    {
-        puzzleCounterText.text = PuzzleManagement.totalSolvedPuzzles.ToString() + "/9";
 
-    }
-
-
-    //delay of the scene transition after a puzzle is completed
 }
