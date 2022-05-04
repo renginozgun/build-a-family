@@ -7,19 +7,20 @@ using UnityEngine.UI;
 public class PuzzleDragDrop : MonoBehaviour
 {
     private GameObject selectedObject;
+
     Rigidbody rb;
     private int correctPosition = 0;
 
     private int numberOfPieces;
-
-    [SerializeField]
-    private GameObject puzzleBarFill;
     
     [SerializeField]
     private GameObject successMessage;
 
     [SerializeField]
     private GameObject brokenModel;
+
+    [SerializeField]
+    private GameObject completedModel;
 
     [SerializeField]
     private Text puzzleCounterText;
@@ -154,22 +155,17 @@ public class PuzzleDragDrop : MonoBehaviour
     {
         {
             if (
-                (xValue < 0.2 && xValue > -0.2) &&
-                (zValue < 0.2 && zValue > -0.2)
+                (xValue < -0.1 && xValue > -0.5) &&
+                (zValue < -0.1 && zValue > -0.5)
             )
             {
                 correctPosition++;
-
-                selectedObject.transform.localPosition = new Vector3(0,-0.125f,0);
 
                 Debug.Log(correctPosition);
 
                 Debug.Log(selectedObject);
 
                 puzzleMap[selectedObject] = true;
-
-                selectedObject.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
-
             }
         }
     }
@@ -178,14 +174,9 @@ public class PuzzleDragDrop : MonoBehaviour
     private void setFinalScene()
     {
         successMessage.SetActive(true);
-        //brokenModel.SetActive(false);
-       // completedModel.SetActive(true);
-        puzzleCounterText.text = solvedPuzzles.ToString() + "/9";
-
-        Vector3 temp = puzzleBarFill.transform.localScale ;
-        temp.z=+0.06f;
-        puzzleBarFill.transform.localScale=temp;
-  
+        brokenModel.SetActive(false);
+        completedModel.SetActive(true);
+        puzzleCounterText.text = solvedPuzzles.ToString() + "/9 Solved Puzzles";
         // sceneTransition();
     }
 
