@@ -15,11 +15,13 @@ public class PuzzleManagement : MonoBehaviour
     
     private static bool updateBar=false;
 
+    public static string selectedObject;
+
 
     // Start is called before the first frame update
     void Start()
     {
-      Debug.Log(this.tag);
+      
     }
 
     // Update is called once per frame
@@ -38,10 +40,10 @@ public class PuzzleManagement : MonoBehaviour
     }
 
     void OnMouseDown()
-    {       
-       
-        
-        SceneManager.LoadScene(this.tag);
+    {         
+        SceneManager.LoadScene("Puzzle Scene");
+        selectedObject=this.tag;
+        Debug.Log(selectedObject);
     }
 
 }

@@ -7,6 +7,8 @@ TagManager:
   - Draggable
   - Puzzle Scene
   - Puzzle Scene2
+  - Plate
+  - Hat
   layers:
   - Default
   - TransparentFX

@@ -39,6 +39,7 @@ public class HatDragDrop : MonoBehaviour
     {
         
         setSolvedPuzzleText();
+
         numberOfPieces = brokenModel.transform.childCount;
         var children =
             brokenModel.transform.root.GetComponentsInChildren<Transform>();
