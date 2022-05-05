@@ -9,6 +9,7 @@ TagManager:
   - Puzzle Scene2
   - Plate
   - Hat
+  - Broom
   layers:
   - Default
   - TransparentFX
