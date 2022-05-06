@@ -22,7 +22,7 @@ Karar aşamasında.
 ### Ürün Açıklaması
 Build a Family, sizi bir çocuğun bakış açısından ailesiyle ilgili bir gizemi keşfetmeye davet ediyor. Zamana karşı yarışta
 evin içinde bulman gereken objeleri bulup, tamamlaman gereken tüm görevleri tamamlayabilirsen gizemi açığa çıkaracaksın. 
-Fakat görevleri tamamlaman o kadar kolay olmayacak, evin içinde anne ve babandan gizlenmeyi unutma!
+Fakat görevleri tamamlaman o kadar kolay olmayacak, evin içinde anne ve babandan gizlenmeyi unutma! Bu oyun, çocuk istismarına dikkat çekmek amacıyla geliştirilmektedir.
 `Atmosferik` `Öyküleme` `Keşif` `Puzzle`
 
 ### Ürün Özellikleri
