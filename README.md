@@ -13,7 +13,6 @@ Karar aşamasında.
 | Rengin Özgün Akbor | Scrum Master, Developer 🎯 💻 |
 | Dinçer Özbey | Developer 💻 |
 | Batuhan Özbaş | Developer 💻|
-| Batuhan Özbaş | Developer 💻|
 | Ahmet Oktay Sezer | Designer 🎨 |
 
 #### Ürün İsmi
