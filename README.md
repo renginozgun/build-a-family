@@ -38,7 +38,7 @@ Fakat görevleri tamamlaman o kadar kolay olmayacak, evin içinde anne ve baband
 - **Sprint içinde tamamlanması tahmin edilen puan**: 60 puan
 - **Puan tamamlama mantığı**: Toplamda proje boyunca tamamlanması gereken 179 puanlık backlog bulunmaktadır. 3 sprint'e bölündüğünde ilk sprint'in en azından 60 ile başlaması gerektiğine karar verildi.
 Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
-- **Daily Scrum** : Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği Google Docs olarak Readme'de tarafımızdan paylaşılmaktadır: EKLENECEK...
+- **Daily Scrum** : Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği Google Docs olarak Readme'de tarafımızdan paylaşılmaktadır: https://docs.google.com/document/d/11Z7Cc7VY7zDeftC2oPCYHEpGL6PM-R_5g-P_y45ZPDo/edit?usp=sharing
 - **Sprint board updates** : 
 
 ![ss1](https://user-images.githubusercontent.com/47036671/167201465-4ee5c258-9322-4c3f-87ba-8be17dbe4626.PNG)
@@ -68,5 +68,13 @@ Final Ekranı (first draft)
 Path üzerinde yürütme (First draft)
 ![3a5c4050-27d9-45a7-bda7-b9df18fbbee0](https://user-images.githubusercontent.com/47036671/167201883-c1422a50-b46d-442c-b374-0c75f8f15ec3.jpg)
 
+### Sprint Review
+İlk sprintte, oyun mekaniğinin temel ögeleri için bir arge çalışması yapma, ve daha sonra bunları projede uygulama hedefine başarıyla ulaşılmıştır. Oyun mekaniği açısından kritik olan çoğu özellik tamamlandı. Puzze eşyalarının bir kısmının modellemesi tahmin edilenden uzun sürdüğü için geliştirme yetişmedi ve bir sonraki sprinte aktarıldı. Ev sahnesi, puzzle sahnesi, oyun temel özellikleri ve final sahnesinin gelişimi tamamlandı ve test edildi. Bir sonraki sprint ile beraber evin ve karakterlerin modelleme ve texture uygulamalarını da bitirerek başından sonuna oynanabilen bir oyun çıkarmayı hedefliyoruz.
 
+### Sprint Retrospective
 
+- Gelişiminde hem tasarımcı, hem de developer çalışması gerektiren tasklar için daha net deadlinelar verilmesi kararlaştırıldı.
+- Github kullanımı için tekrar kendi aramızda bir eğitim gerçekleştireceğiz.
+- Vize/Final tarihleri olan arkadaşlarımız için önceden tasklarda planlama yapma kararı
+- Sprint sonlarında grup motivasyonu için oyun oynama kararı alındı.
+- Eğer tasklarda istediğimiz ilerlemeyi gerçekleştirebilirsek ekstra özellikler üzerine düşünme kararı alındı
