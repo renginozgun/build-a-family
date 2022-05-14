@@ -10,6 +10,12 @@ TagManager:
   - Plate
   - Hat
   - Broom
+  - Dress
+  - Jacket
+  - Necklace
+  - Bear
+  - Drawing
+  - Tree
   layers:
   - Default
   - TransparentFX
