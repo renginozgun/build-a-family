@@ -16,8 +16,6 @@ TagManager:
   - Bear
   - Drawing
   - Tree
-  - TheKid
-  - Dad
   layers:
   - Default
   - TransparentFX
@@ -25,7 +23,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
