@@ -54,14 +54,13 @@ public class PuzzleManagement : MonoBehaviour
 
         solvedItemsMap[selectedObject] = true;
 
+
     }
 
     void OnMouseDown()
     {
-        Debug.Log("girdi");
         SceneManager.LoadScene("Puzzle Scene");
         selectedObject = this.tag;
-        Debug.Log(selectedObject);
     }
 
     public static void setPuzzleObjectMap()

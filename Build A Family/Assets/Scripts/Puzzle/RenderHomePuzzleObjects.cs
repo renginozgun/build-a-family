@@ -15,6 +15,7 @@ void Awake(){
         var map = PuzzleManagement.solvedItemsMap;
             foreach(Transform child in transform){
             if(map[child.gameObject.tag]){
+               
                 child.gameObject.SetActive(false);
             }
         }

@@ -57,7 +57,7 @@ public class DragDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
-        Debug.Log("MOUSE DOWN");
+        
         if (!isInRightPlace)
         {
             mZCoord = Camera.main.WorldToScreenPoint(this.gameObject.transform.position).z;
@@ -69,7 +69,7 @@ public class DragDrop : MonoBehaviour
     }
 
     private void OnMouseDrag()
-    {   Debug.Log("MOUSE DRAG");
+    { 
         if (!isInRightPlace)
         {
             this.transform.position = GetMouseWorldPos() + mOffset;
@@ -81,7 +81,7 @@ public class DragDrop : MonoBehaviour
     }
 
     private void OnMouseUp()
-    {Debug.Log("MOUSE UP");
+    {
         if (!isInRightPlace)
         {
             checkSuccessStatus(this.transform.localPosition.x, this.transform.localPosition.z);
