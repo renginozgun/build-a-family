@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class KidMovement : MonoBehaviour
 {
-    // public Animator playerAnim;
+    
     public Rigidbody playerRigid;
     public float w_speed, wb_speed, olw_speed, rn_speed, ro_speed;
     public bool walking;
@@ -16,14 +16,23 @@ public class KidMovement : MonoBehaviour
 
     public AudioSource walkingSound;
 
+    public Animator playerAnimation;
+
     public bool flag = false;
 
+    private void Awake()
+    {
+    
+
+    }
 
     void Start()
     {
-		playerTrans.position=SaveLocation.Instance.SpawnLocation;
-		playerTrans.rotation=Quaternion.Euler(SaveLocation.Instance.SpawnRotation);
-		
+        playerTrans.position = SaveLocation.Instance.SpawnLocation;
+        playerTrans.rotation = Quaternion.Euler(SaveLocation.Instance.SpawnRotation);
+
+        //playerAnimation.SetTrigger("Idle");
+
 
     }
 
@@ -44,7 +53,7 @@ public class KidMovement : MonoBehaviour
     }
     void Update()
     {
-       
+
 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -89,17 +98,22 @@ public class KidMovement : MonoBehaviour
 
             }
 
-            
-            walkingSound.mute=false;
+
+            walkingSound.mute = false;
+
+           
+            playerAnimation.SetTrigger("Walking");
         }
         else
         {
             playerRigid.velocity = new Vector3(0, 0, 0);
-           
-             walkingSound.mute=true;
+
+            walkingSound.mute = true;
+          //  playerAnimation.SetTrigger("Idle");
+
         }
 
-       // latestKidPosition = playerTrans;
+        // latestKidPosition = playerTrans;
 
 
 
@@ -107,15 +121,15 @@ public class KidMovement : MonoBehaviour
 		Debug.Log("Latest poisiton at UPDATE:" + latestKidPosition.localPosition.x + latestKidPosition.localPosition.y + latestKidPosition.localPosition.z );
  */
 
- 
+
     }
 
     private void OnDestroy()
     {
-		SaveLocation.Instance.SpawnLocation = playerTrans.position;
-		var temp = new Vector3(playerTrans.localEulerAngles.x,playerTrans.localEulerAngles.y,playerTrans.localEulerAngles.z);
-		SaveLocation.Instance.SpawnRotation=temp;
-    
+        SaveLocation.Instance.SpawnLocation = playerTrans.position;
+        var temp = new Vector3(playerTrans.localEulerAngles.x, playerTrans.localEulerAngles.y, playerTrans.localEulerAngles.z);
+        SaveLocation.Instance.SpawnRotation = temp;
+
     }
 
 }

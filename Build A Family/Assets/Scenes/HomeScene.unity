@@ -587,7 +587,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c1f1aeaf781c33542bb7d61f96865edf, type: 2}
     - target: {fileID: -8679921383154817045, guid: 25f71b4597168874387236cdd5d295da, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 25f71b4597168874387236cdd5d295da, type: 3}
       propertyPath: m_LocalScale.x
@@ -3295,6 +3295,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 85d863e3b03ef5e43ab1377ec3ba91b9, type: 3}
   m_PrefabInstance: {fileID: 360994625}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &365078032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 25f71b4597168874387236cdd5d295da, type: 3}
+  m_PrefabInstance: {fileID: 35607804}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &365078033
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 365078032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f9789c56c3bc3a64ca0f637180c24326, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &367364136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4842,7 +4866,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4936,7 +4960,7 @@ Transform:
   m_LocalScale: {x: 0.8675959, y: 0.8675959, z: 0.8675959}
   m_Children: []
   m_Father: {fileID: 1109876286}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &614816326
 PrefabInstance:
@@ -8792,6 +8816,7 @@ MonoBehaviour:
   walking: 0
   playerTrans: {fileID: 1109876286}
   walkingSound: {fileID: 612505717}
+  playerAnimation: {fileID: 365078033}
   flag: 0
 --- !u!54 &1109876282
 Rigidbody:
@@ -8884,8 +8909,8 @@ Transform:
   m_LocalScale: {x: 1.1526103, y: 1.1526103, z: 1.1526103}
   m_Children:
   - {fileID: 963194228}
-  - {fileID: 35607805}
   - {fileID: 612505718}
+  - {fileID: 35607805}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10942,9 +10967,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4b042c6089d429d4cbad00a7419b5129, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.542
+  m_Volume: 0.31
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
