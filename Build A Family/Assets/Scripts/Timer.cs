@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 90;
+    public float timeValue = 660;
     public Text timeText;
 
+    void Start()
+    {
+        timeValue = SaveLocation.Instance.timeValue;
+    }
     void Update()
     {
-        if(timeValue > 0)
+        if (timeValue > 0)
         {
             timeValue -= Time.deltaTime;
         }
@@ -22,7 +26,7 @@ public class Timer : MonoBehaviour
     }
     void DisplayTime(float timeToDisplay)
     {
-        if(timeToDisplay < 0)
+        if (timeToDisplay < 0)
         {
             timeToDisplay = 0;
         }
@@ -31,5 +35,9 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    private void OnDestroy() {
+         SaveLocation.Instance.timeValue = timeValue;
     }
 }
