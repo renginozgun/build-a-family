@@ -14,6 +14,8 @@ public class KidMovement : MonoBehaviour
     public Transform playerTrans;
     public static Transform latestKidPosition;
 
+    public AudioSource walkingSound;
+
     public bool flag = false;
 
 
@@ -86,10 +88,15 @@ public class KidMovement : MonoBehaviour
                 w_speed = olw_speed;
 
             }
+
+            
+            walkingSound.mute=false;
         }
         else
         {
             playerRigid.velocity = new Vector3(0, 0, 0);
+           
+             walkingSound.mute=true;
         }
 
        // latestKidPosition = playerTrans;

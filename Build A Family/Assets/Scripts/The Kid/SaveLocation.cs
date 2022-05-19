@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaveLocation : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class SaveLocation : MonoBehaviour
 
     public Vector3 SpawnRotation = new Vector3(0, 0, 0);
 
-    public float timeValue = 660;
+    public float timeValue = 10;
+
+    public bool flag = true;
 
     void Start()
     {
@@ -22,5 +25,18 @@ public class SaveLocation : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    private void Update()
+    {
+            if(PuzzleManagement.totalSolvedPuzzles==9 && flag){
+                SceneManager.LoadScene("Final Scene");
+                flag=false;
+            }
+
+            if(timeValue==0 && flag){
+                SceneManager.LoadScene("Fail Scene");
+                flag=false;
+            }
     }
 }

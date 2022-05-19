@@ -10,7 +10,7 @@ public class PuzzleManagement : MonoBehaviour
 
     public static IDictionary<string, bool> solvedItemsMap = new Dictionary<string, bool>();
 
-    public static bool tempFlag=true;
+    public static bool tempFlag = true;
     // [SerializeField] 
     // private  Text solvedPuzzleStatus;
 
@@ -19,29 +19,32 @@ public class PuzzleManagement : MonoBehaviour
     public static string selectedObject;
 
 
- 
+
     void Awake()
     {
-        if(tempFlag){ 
-        solvedItemsMap.Add("Hat", false);
-        solvedItemsMap.Add("Necklace", false);
-        solvedItemsMap.Add("Broom", false);
+        if (tempFlag)
+        {
+            solvedItemsMap.Add("Hat", false);
+            solvedItemsMap.Add("Necklace", false);
+            solvedItemsMap.Add("Broom", false);
 
-        solvedItemsMap.Add("Plate", false);
-        solvedItemsMap.Add("Jacket", false);
-        solvedItemsMap.Add("Dress", false);
+            solvedItemsMap.Add("Plate", false);
+            solvedItemsMap.Add("Jacket", false);
+            solvedItemsMap.Add("Dress", false);
 
-        solvedItemsMap.Add("Drawing", false);
-        solvedItemsMap.Add("Bear", false);
-        solvedItemsMap.Add("Tree", false); 
-        tempFlag=false;
+            solvedItemsMap.Add("Drawing", false);
+            solvedItemsMap.Add("Bear", false);
+            solvedItemsMap.Add("Tree", false);
+            tempFlag = false;
 
-    }}
+        }
+    }
 
     void Start()
     {
 
     }
+
 
 
     public static void updateTotalSolvedPuzzles()
@@ -66,7 +69,7 @@ public class PuzzleManagement : MonoBehaviour
     public static void setPuzzleObjectMap()
     {
 
-      
+
     }
 
 }
