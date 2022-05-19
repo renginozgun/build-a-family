@@ -3795,7 +3795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34236b607ffbe674d8b09788e1e37658, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeValue: 2
+  timeValue: 660
   timeText: {fileID: 448013716}
   timeTickingSound: {fileID: 1386844093}
 --- !u!114 &448013716
