@@ -7,10 +7,11 @@ using UnityEngine;
 
 public class KidMovement : MonoBehaviour
 {
-    
+
     public Rigidbody playerRigid;
     public float w_speed, wb_speed, olw_speed, rn_speed, ro_speed;
-    public bool walking;
+    public bool walk, lTurn, rTurn, walkBack, walkFast;
+
     public Transform playerTrans;
     public static Transform latestKidPosition;
 
@@ -22,7 +23,7 @@ public class KidMovement : MonoBehaviour
 
     private void Awake()
     {
-    
+
 
     }
 
@@ -30,9 +31,6 @@ public class KidMovement : MonoBehaviour
     {
         playerTrans.position = SaveLocation.Instance.SpawnLocation;
         playerTrans.rotation = Quaternion.Euler(SaveLocation.Instance.SpawnRotation);
-
-        //playerAnimation.SetTrigger("Idle");
-
 
     }
 
@@ -43,13 +41,14 @@ public class KidMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             playerRigid.velocity = transform.forward * w_speed * Time.deltaTime;
+
         }
         if (Input.GetKey(KeyCode.S))
         {
             playerRigid.velocity = -transform.forward * wb_speed * Time.deltaTime;
         }
 
-        // latestKidPosition = playerTrans
+
     }
     void Update()
     {
@@ -57,70 +56,104 @@ public class KidMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            Debug.Log("W'ye bastı");
-            walking = true;
+
+            walk = true;
 
         }
         if (Input.GetKeyUp(KeyCode.W))
         {
-            Debug.Log("W'den kaldırdı");
-            walking = false;
+
+            walk = false;
+            walkFast = false;
 
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-
+            walkBack = true;
 
         }
         if (Input.GetKeyUp(KeyCode.S))
         {
 
+            walkBack = false;
 
         }
+
         if (Input.GetKey(KeyCode.A))
         {
             playerTrans.Rotate(0, -ro_speed * Time.deltaTime, 0);
+
+        }
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            lTurn = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            lTurn = false;
         }
         if (Input.GetKey(KeyCode.D))
         {
             playerTrans.Rotate(0, ro_speed * Time.deltaTime, 0);
         }
 
-        if (walking == true)
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            rTurn = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.D))
+        {
+            rTurn = false;
+        }
+
+        if (walk)
         {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 w_speed = w_speed + rn_speed;
+                walkFast = true;
             }
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 w_speed = olw_speed;
+                walkFast = false;
 
             }
-
-
             walkingSound.mute = false;
-
-           
-            playerAnimation.SetTrigger("Walking");
         }
         else
         {
             playerRigid.velocity = new Vector3(0, 0, 0);
-
             walkingSound.mute = true;
-          //  playerAnimation.SetTrigger("Idle");
 
         }
 
-        // latestKidPosition = playerTrans;
 
 
+        setAnimations();
 
-        /* Debug.Log("Kid position at START: " + playerTrans.localPosition.x + playerTrans.localPosition.y + playerTrans.localPosition.z );
-		Debug.Log("Latest poisiton at UPDATE:" + latestKidPosition.localPosition.x + latestKidPosition.localPosition.y + latestKidPosition.localPosition.z );
- */
 
+    }
+
+
+    private void setAnimations()
+    {
+
+        playerAnimation.SetBool("Walk", walk);
+        playerAnimation.SetBool("Left Turn", lTurn);
+        playerAnimation.SetBool("Walk Back", walkBack);
+        playerAnimation.SetBool("Right Turn", rTurn);
+
+        if (walk)
+        {
+            playerAnimation.SetBool("Walk Fast", walkFast);
+        }
+        else if (!walk)
+        {
+            playerAnimation.SetBool("Walk Fast", false);
+        }
 
     }
 
