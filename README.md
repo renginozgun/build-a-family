@@ -78,3 +78,32 @@ Path üzerinde yürütme (First draft)
 - Vize/Final tarihleri olan arkadaşlarımız için önceden tasklarda planlama yapma kararı
 - Sprint sonlarında grup motivasyonu için oyun oynama kararı alındı.
 - Eğer tasklarda istediğimiz ilerlemeyi gerçekleştirebilirsek ekstra özellikler üzerine düşünme kararı alındı
+
+### Sprint 2
+- **Sprint Notları**: User storyler, Miro Board'da açıklanmıştır. Dependency ve açıklamaları da miro boardda yer almaktadır. Ayrıca yaptığımız tasklar Develop, Design ve Bug olmak üzere etiketlenmiştir.
+- **Sprint içinde tamamlanması tahmin edilen puan**: 84 puan
+- **Puan tamamlama mantığı**: Geçen sprintte belirlediğimiz user storyleri devam ettirmekteyiz. Buna ek olarak bazı gereksinimler ekledik ve toplam puanımızı güncelledik. Yeni puanlar toplamı 219 olurke, sprint başına en az 70 puanı hedefliyoruz. Bu sprint daha ileride olmak istediğimiz için hedefimizi yüksek tuttuk. 
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+- **Daily Scrum** : Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği Google Docs olarak Readme'de tarafımızdan paylaşılmaktadır: [https://docs.google.com/document/d/11Z7Cc7VY7zDeftC2oPCYHEpGL6PM-R_5g-P_y45ZPDo/edit?usp=sharing](https://docs.google.com/document/d/1KPdTpebvCDHaDzIEmFSsJEHnz9ZZw79IKDMP8yi5qNo/edit)
+- **Sprint board updates** : 
+- 
+![Ekran görüntüsü 2022-05-23 195012](https://user-images.githubusercontent.com/47036671/169887355-0f701298-dc23-40d2-8c03-f3666e8cbcaa.png)
+![Ekran görüntüsü 2022-05-23 194935](https://user-images.githubusercontent.com/47036671/169887439-cdafa1d3-45eb-4f9a-8d75-7f7919b78a84.png)
+
+- **Ürün Durumu Ekran Görüntüleri** :
+
+![Ekran görüntüsü 2022-05-23 195852](https://user-images.githubusercontent.com/47036671/169887493-4d283586-6e09-42c9-8d41-498f4f906822.png)
+![Ekran görüntüsü 2022-05-23 195923](https://user-images.githubusercontent.com/47036671/169887501-3172d892-1729-4627-8cac-45bf1c449772.png)
+![Ekran görüntüsü 2022-05-23 200214](https://user-images.githubusercontent.com/47036671/169887511-3a38fe5b-8786-46a7-bc4c-7b51c58050bd.png)
+![Ekran görüntüsü 2022-05-23 200242](https://user-images.githubusercontent.com/47036671/169887517-2313a768-5289-4455-bf37-73f27e0eb5b9.png)
+![Ekran görüntüsü 2022-05-23 200559](https://user-images.githubusercontent.com/47036671/169887528-deddeb05-acf9-45ed-ba06-f77c324ac059.png)
+![Ekran görüntüsü 2022-05-23 200621](https://user-images.githubusercontent.com/47036671/169887541-355c1a78-743a-4d12-8f9c-5bdd461fe6c3.png)
+![6136667d-2856-4da1-abe3-7c4668209f77](https://user-images.githubusercontent.com/47036671/169887651-b3f5429d-0807-483b-a83f-b1b0d38fd123.jpg)
+
+### Sprint Review
+İkinci sprintte Ev sahnesindeki tüm eşyalar kuruldu, The Kid karakterinin kontrolleri ve animasyonları tamamlanıp evde gezebilir hale geldi, evdeki puzzzle eşyalar toplanabilir ve çözülebilir hale getirildi, böylece kullanıcı başından sonuna kadar oynayarak tüm puzzlearı toplayarak Final sahnesine geçebiliyor. Bu sprintte textureları da ev sahnesine eklemeyi hedeflemiştik ama başaramadık. Belli bir süre kısıtında belli puzzları tamamlama şartı file success/fail conditional durumlarını da geliştirdik. Gelecek sprintte kalan tüm taskları bitirerek bir oyun çıkarmayı hedefliyoruz.
+
+### Sprint Retrospective
+- Zaman azaldıkça branchleri mergelerken yaşadığımız conflictler bize çok maliyetli oluyor. Bu nedenle kalan zamanımızda kimin nerede çalışacağını iyi planlayıp çıkacka conflictleri minimuma indirmeyi hedefliyoruz.
+- Mayısın son haftasında final haftaları olduğundan projeyi 3-4 gün erken bitirecek şekilde planlama yapılacak.
+
