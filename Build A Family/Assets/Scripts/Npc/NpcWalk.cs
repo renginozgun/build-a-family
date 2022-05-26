@@ -8,9 +8,6 @@ public class NpcWalk : MonoBehaviour
     public GameObject theDestination;
     NavMeshAgent theAgent;
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {
