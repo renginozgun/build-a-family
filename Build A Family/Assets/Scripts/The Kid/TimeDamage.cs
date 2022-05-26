@@ -2,128 +2,105 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+
 public class TimeDamage : MonoBehaviour
 {
-    [SerializeField] GameObject theKid;
+    [SerializeField]
+    GameObject theKid;
 
-    [SerializeField] GameObject theDad;
-    [SerializeField] Text status;
+    [SerializeField]
+    GameObject theDad;
 
-    [SerializeField] Camera cam;
+    [SerializeField]
+    Image status;
+
+    [SerializeField]
+    Camera cam;
+    [SerializeField]
+    Text damageText;
+
 
     float maxRange = 5;
+
+    bool temp = true;
+
     RaycastHit hit;
 
     private float distance;
-    // Start is called before the first frame update
+
+    public static bool allowTimeDamage=true;
+
     void Start()
     {
-
+        damageText.enabled=false;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-
+        //Checks whether TheDad is in the field of Kid's view
         if (checkVisibility())
         {
+            status.enabled = true;
+     
 
-            status.text = "Danger";
-            status.color = Color.red;
+            if (allowTimeDamage)
+            {
+               
+                Timer.damageTrigger=true;
+                damageText.enabled=true;
+//Make time damage possible again in 10 seconds
+//Make time damage text dissappear in 2 seconds
+                Invoke("setDamageText", 2f);
+                Invoke("setAllowTimeDamage", 10f);
+
+                allowTimeDamage=false;
+               
+            }
+
+  
         }
         else
         {
-            status.text = "Safe";
-            status.color = Color.green;
+            status.enabled = false;
         }
-
     }
-
-/*     private bool checkFieldOfView(Camera cam, GameObject target)
-    {
-
-        var planes = GeometryUtility.CalculateFrustumPlanes(cam);
-        var point = target.transform.position;
-
-        foreach (var plane in planes)
-        {
-
-            if (plane.GetDistanceToPoint(point) < 0)
-            {
-                return false;
-            }
-        }
-
-        return true;
-
-    }
-
-    private bool view()
-    {
-        RaycastHit hit;
-
-        if (Physics.Raycast(theKid.transform.position, theKid.transform.TransformDirection(Vector3.forward), out hit, 5f))
-        {
-
-            if (hit.collider.name == "Cube")
-            {
-                return true;
-
-            }
-        }
-
-        return false;
-
-    }
-
-    private bool view2()
-    {
-
-        LayerMask layer = LayerMask.NameToLayer("Default");
-
-
-        if (Physics.Raycast(cam.transform.position, (theDad.transform.position - cam.transform.position), out hit))
-        {
-            Debug.Log("hit " + hit.collider.gameObject.name);
-            if (hit.transform.tag == "Dad")
-            {
-                Debug.Log("dad");
-                return true;
-
-            }
-
-        }
-
-        return false;
-
-
-    } */
 
     bool checkVisibility()
     {
-
-        Vector3 directionToPlayer = (theDad.transform.position - cam.transform.position).normalized;
-        float angleBetweenGuardAndPlayer = Vector3.Angle(cam.transform.forward, directionToPlayer);
+        Vector3 directionToPlayer =
+            (theDad.transform.position - cam.transform.position).normalized;
+        float angleBetweenGuardAndPlayer =
+            Vector3.Angle(cam.transform.forward, directionToPlayer);
         if (angleBetweenGuardAndPlayer <= 40)
         {
-            
-
-            if (Physics.Raycast(cam.transform.position, (theDad.transform.position - cam.transform.position), out hit))
+            if (
+                Physics
+                    .Raycast(cam.transform.position,
+                    (theDad.transform.position - cam.transform.position),
+                    out hit)
+            )
             {
                 Debug.Log("hit " + hit.collider.gameObject.name);
                 if (hit.transform.tag == "Dad")
                 {
                     Debug.Log("dad");
                     return true;
-
                 }
-
             }
-
         }
 
         return false;
     }
 
+    private void setDamageText(){
+        damageText.enabled=false;
+    }
 
+    private void setAllowTimeDamage(){
+        allowTimeDamage=true;
+    }
+
+    
 }
