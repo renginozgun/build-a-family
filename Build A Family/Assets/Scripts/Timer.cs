@@ -26,16 +26,16 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (timeValue > 0)
+        if (SaveLocation.Instance.timeValue > 0)
         {
-            timeValue -= Time.deltaTime;
+            SaveLocation.Instance.timeValue -= Time.deltaTime;
 
             //If damage is triggered decrease the time left by 10 seconds
             if (damageTrigger)
             {
-                timeValue -= 10;
+                SaveLocation.Instance.timeValue -= 10;
                 damageTrigger = false;
-                latestDamageTime = timeValue;
+                latestDamageTime = SaveLocation.Instance.timeValue;
             }
 
 /*             //Allow time damage after at least 10 seconds pass
@@ -46,16 +46,16 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            timeValue = 0;
+            SaveLocation.Instance.timeValue = 0;
         }
-        DisplayTime (timeValue);
+        DisplayTime (SaveLocation.Instance.timeValue);
 
-        if (timeValue == 0)
+        if (SaveLocation.Instance.timeValue == 0)
         {
             SceneManager.LoadScene("Fail Scene");
         }
 
-        if (timeValue < 30)
+        if (SaveLocation.Instance.timeValue < 30)
         {
             timeText.color = Color.red;
             timeTickingSound.Play();
@@ -75,10 +75,10 @@ public class Timer : MonoBehaviour
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    private void OnDestroy()
+   /*  private void OnDestroy()
     {
         SaveLocation.Instance.timeValue = timeValue;
-    }
+    } */
 
     public static float getCurrentTime()
     {

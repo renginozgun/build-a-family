@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Analytics;
 
 public class SaveLocation : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class SaveLocation : MonoBehaviour
     private void Update()
     {
             if(PuzzleManagement.totalSolvedPuzzles==9 && flag){
+
+                AnalyticsResult analyticsResult=Analytics.CustomEvent("GameCompletionTime" + timeValue);
+                Debug.Log("analytics result:"  + analyticsResult);
+
                 SceneManager.LoadScene("Final Scene");
                 flag=false;
             }

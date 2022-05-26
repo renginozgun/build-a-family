@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class TimeDamage : MonoBehaviour
 {
     [SerializeField]
@@ -17,9 +16,9 @@ public class TimeDamage : MonoBehaviour
 
     [SerializeField]
     Camera cam;
+
     [SerializeField]
     Text damageText;
-
 
     float maxRange = 5;
 
@@ -29,37 +28,33 @@ public class TimeDamage : MonoBehaviour
 
     private float distance;
 
-    public static bool allowTimeDamage=true;
+    public static bool allowTimeDamage = true;
 
     void Start()
     {
-        damageText.enabled=false;
+        damageText.enabled = false;
     }
-
 
     void Update()
     {
         //Checks whether TheDad is in the field of Kid's view
+        
         if (checkVisibility())
         {
             status.enabled = true;
-     
+             
+                if (allowTimeDamage)
+                {
+                    Timer.damageTrigger = true;
+                    damageText.enabled = true;
 
-            if (allowTimeDamage)
-            {
-               
-                Timer.damageTrigger=true;
-                damageText.enabled=true;
-//Make time damage possible again in 10 seconds
-//Make time damage text dissappear in 2 seconds
-                Invoke("setDamageText", 2f);
-                Invoke("setAllowTimeDamage", 10f);
-
-                allowTimeDamage=false;
-               
-            }
-
-  
+                    //Make time damage possible again in 10 seconds
+                    //Make time damage text dissappear in 2 seconds
+                    Invoke("setDamageText", 2f);
+                    Invoke("setAllowTimeDamage", 10f);
+                    allowTimeDamage = false;
+                }
+            
         }
         else
         {
@@ -82,10 +77,8 @@ public class TimeDamage : MonoBehaviour
                     out hit)
             )
             {
-                Debug.Log("hit " + hit.collider.gameObject.name);
                 if (hit.transform.tag == "Dad")
                 {
-                    Debug.Log("dad");
                     return true;
                 }
             }
@@ -94,13 +87,13 @@ public class TimeDamage : MonoBehaviour
         return false;
     }
 
-    private void setDamageText(){
-        damageText.enabled=false;
+    private void setDamageText()
+    {
+        damageText.enabled = false;
     }
 
-    private void setAllowTimeDamage(){
-        allowTimeDamage=true;
+    private void setAllowTimeDamage()
+    {
+        allowTimeDamage = true;
     }
-
-    
 }

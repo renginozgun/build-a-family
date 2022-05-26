@@ -40,6 +40,7 @@ public class DragDrop : MonoBehaviour
 
     private void Start(){
         item= puzzleByTag[tag];
+        item.setCorrectedPieces(0);
     }
 
     private void Update()
@@ -75,9 +76,6 @@ public class DragDrop : MonoBehaviour
             this.transform.position = GetMouseWorldPos() + mOffset;
 
         }
-
-
-
     }
 
     private void OnMouseUp()

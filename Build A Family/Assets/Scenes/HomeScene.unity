@@ -10898,6 +10898,7 @@ MonoBehaviour:
   theDad: {fileID: 1049989951}
   status: {fileID: 810616129}
   cam: {fileID: 963194227}
+  damageText: {fileID: 1449500909}
 --- !u!4 &1273999446
 Transform:
   m_ObjectHideFlags: 0
