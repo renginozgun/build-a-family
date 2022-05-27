@@ -31,15 +31,16 @@ public class Option : MonoBehaviour
                 break;
 
             case "Retry":
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+               // SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+               Retry();
                 break;
 
             case "Gameplay":
                 GamePlay();
                 break;
 
-            case "Quit Game":
-                Application.Quit();
+            case "Quit":
+                Quit();
                 break;
 
         }
@@ -53,6 +54,19 @@ public class Option : MonoBehaviour
     void GamePlay()
     {
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public static void Retry(){
+
+        Destroy(SaveLocation.Instance);
+        PuzzleManagement.totalSolvedPuzzles=0;
+        SceneManager.LoadScene("HomeScene");
+    }
+
+    public static void Quit(){
+        UnityEditor.EditorApplication.isPlaying = false; //TODO delete later it only closes editor
+        Application.Quit();
+
     }
 
 

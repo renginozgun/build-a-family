@@ -16,6 +16,8 @@ public class PuzzleManagement : MonoBehaviour
 
     private static bool updateBar = false;
 
+ 
+
     public static string selectedObject;
 
 
@@ -47,6 +49,7 @@ public class PuzzleManagement : MonoBehaviour
 
 
 
+
     public static void updateTotalSolvedPuzzles()
     {
 
@@ -69,7 +72,8 @@ public class PuzzleManagement : MonoBehaviour
     public static void setPuzzleObjectMap()
     {
 
-
     }
+    
+
 
 }

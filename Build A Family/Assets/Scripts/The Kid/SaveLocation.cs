@@ -40,7 +40,7 @@ public class SaveLocation : MonoBehaviour
             }
 
             if(timeValue==0 && flag){
-                SceneManager.LoadScene("Fail Scene");
+                SceneManager.LoadScene("Fail Scene");         
                 flag=false;
             }
     }

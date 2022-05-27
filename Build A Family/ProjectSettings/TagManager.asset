@@ -17,6 +17,8 @@ TagManager:
   - Drawing
   - Tree
   - Dad
+  - Retry
+  - Exit
   layers:
   - Default
   - TransparentFX
