@@ -155,6 +155,16 @@ public class KidMovement : MonoBehaviour
             playerAnimation.SetBool("Walk Fast", false);
         }
 
+        if(lTurn || rTurn){
+            if(walk){
+                playerAnimation.SetBool("Left Turn", false);
+                playerAnimation.SetBool("Right Turn", false);
+            }
+
+ 
+
+        }
+
     }
 
     private void OnDestroy()
