@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FinalSceneScript : MonoBehaviour
 {
@@ -126,7 +127,12 @@ public class FinalSceneScript : MonoBehaviour
             }
         }
 
-
+        if (sloth.Count == 0)
+        {
+            animation.Play();
+            putText.text = "";
+            Invoke("setStatScene", 15f);
+        }
     }
 
     void initializeSloth()
@@ -140,5 +146,10 @@ public class FinalSceneScript : MonoBehaviour
         sloth.Push("Necklase");
         sloth.Push("Dress");
         sloth.Push("Broom");
+    }
+
+    private void setStatScene()
+    {
+        SceneManager.LoadScene("StatsScene");
     }
 }

@@ -31,7 +31,11 @@ public class PuzzleUIController : MonoBehaviour
             updateUIElements();
             isUpdated = false;
         }
-
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Debug.Log("Escape key was pressed");
+            SceneManager.LoadScene("HomeScene");
+        }
     }
 
     void updateUIElements()
