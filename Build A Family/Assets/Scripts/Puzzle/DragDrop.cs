@@ -52,13 +52,13 @@ public class DragDrop : MonoBehaviour
     private void Update()
     {
 
-        //if (item.getCorrectedPieces() == 4)
-        //{
-        //    PuzzleManagement.updateTotalSolvedPuzzles();
+        if (item.getCorrectedPieces() == 4)
+        {
+            PuzzleManagement.updateTotalSolvedPuzzles();
 
-        //    PuzzleUIController.onCloseButtonClick();
-        //    item.setCorrectedPieces(0); //TODO delete later
-        //}
+            PuzzleUIController.onCloseButtonClick();
+            item.setCorrectedPieces(0); //TODO delete later
+        }
        
     }
 
