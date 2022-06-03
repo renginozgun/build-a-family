@@ -37,7 +37,7 @@ public class DragDrop : MonoBehaviour
             puzzleByTag.Add("Bear", new PuzzleObject(new Vector3(0, 0, 0), new Boundries(-0.2, 0.2), new Boundries(-0.1, 0.2)));
             puzzleByTag.Add("Drawing", new PuzzleObject(new Vector3(0, 0, 0), new Boundries(-0.2, 0.2), new Boundries(-0.1, 0.2)));
             puzzleByTag.Add("Necklace", new PuzzleObject(new Vector3(0, 0, 0), new Boundries(-0.2, 0.2), new Boundries(-0.1, 0.2)));
-            puzzleByTag.Add("Tree", new PuzzleObject(new Vector3(0, 0, 0), new Boundries(-0.2, 0.2), new Boundries(-0.1, 0.2)));
+            puzzleByTag.Add("Tree", new PuzzleObject(new Vector3(-43.57f, -19.48f, 11.228f), new Boundries(-45, -41), new Boundries(9, 14)));
             puzzleByTag.Add("Broom", new PuzzleObject(new Vector3(0, 0, 0), new Boundries(-0.2, 0.2), new Boundries(-0.1, 0.2)));
             flag = false;
         }
@@ -120,7 +120,7 @@ public class DragDrop : MonoBehaviour
             this.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
             isInRightPlace = true;
 
-            if (tag == "Hat") item.increaseCorrectedPieces(4); // Hat puzzle containts only one piece to solve. We handle the exception by marking it as completed at one call. 
+            if (tag == "Hat" || tag== "Tree") item.increaseCorrectedPieces(4); // Hat puzzle containts only one piece to solve. We handle the exception by marking it as completed at one call. 
             else item.increaseCorrectedPieces();
 
             Debug.Log("Succes= " + item.getCorrectedPieces());
