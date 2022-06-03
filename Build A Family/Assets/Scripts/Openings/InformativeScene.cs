@@ -7,7 +7,7 @@ public class InformativeScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("setNewScene", 5f);
+        Invoke("setNewScene", 30f);
     }
 
     // Update is called once per frame
@@ -17,6 +17,6 @@ public class InformativeScene : MonoBehaviour
     }
 
     void setNewScene(){
-         SceneManager.LoadScene("Gameplay");
+         SceneManager.LoadScene("Opening Menu");
     }
 }

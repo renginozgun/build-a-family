@@ -33,7 +33,7 @@ public class Timer : MonoBehaviour
             //If damage is triggered decrease the time left by 10 seconds
             if (damageTrigger)
             {
-                SaveLocation.Instance.timeValue -= 10;
+                SaveLocation.Instance.timeValue -= 60;
                 damageTrigger = false;
                 latestDamageTime = SaveLocation.Instance.timeValue;
             }

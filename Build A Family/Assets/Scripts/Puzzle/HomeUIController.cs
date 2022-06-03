@@ -29,7 +29,7 @@ public class HomeUIController : MonoBehaviour
     void updateUIElements()
     {
 
-        puzzleCounter.text = PuzzleManagement.totalSolvedPuzzles.ToString() + " /9 Solved Puzzles";
+        puzzleCounter.text = PuzzleManagement.totalSolvedPuzzles.ToString() + "/9";
      
     }
 

@@ -17,6 +17,6 @@ public class Gameplay : MonoBehaviour
     }
 
     void setNewScene(){
-         SceneManager.LoadScene("HomeScene");
+         SceneManager.LoadScene("Opening Menu");
     }
 }

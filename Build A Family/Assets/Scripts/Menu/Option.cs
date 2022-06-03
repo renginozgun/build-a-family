@@ -29,6 +29,10 @@ public class Option : MonoBehaviour
             case "Resume":
                 Resume();
                 break;
+            case "Start":
+                GameObject.FindGameObjectWithTag("Music").GetComponent<Sound>().StopMusic();
+                Resume();
+                break;
 
             case "Retry":
                // SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
@@ -42,7 +46,6 @@ public class Option : MonoBehaviour
             case "Quit":
                 Quit();
                 break;
-
         }
     }
 
