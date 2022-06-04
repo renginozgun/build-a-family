@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class FinalSceneScript : MonoBehaviour
 {
+     [SerializeField]
+    AudioSource kidVoice;
+
     [SerializeField]
     GameObject hat;
 
@@ -131,7 +134,8 @@ public class FinalSceneScript : MonoBehaviour
         {
             animation.Play();
             putText.text = "";
-            Invoke("setStatScene", 15f);
+
+            Invoke("setStatScene", 20f);
         }
     }
 
@@ -152,4 +156,7 @@ public class FinalSceneScript : MonoBehaviour
     {
         SceneManager.LoadScene("StatsScene");
     }
+
+  
+
 }

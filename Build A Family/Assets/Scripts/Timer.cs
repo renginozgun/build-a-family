@@ -79,7 +79,8 @@ public class Timer : MonoBehaviour
         if (SaveLocation.Instance.timeValue < 30)
         {
             timeText.color = Color.red;
-            timeTickingSound.Play();
+            
+            timeTickingSound.mute=false;
         }
     }
 
