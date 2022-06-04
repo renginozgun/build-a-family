@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class InformativeScene : MonoBehaviour
+using UnityEngine.UI;
+
+public class Gameplay_in : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField]
+    private Button closeButton;
+    
     void Start()
     {
-        Invoke("setNewScene", 5f);
+        closeButton.onClick.AddListener(setNewScene);
     }
 
     // Update is called once per frame
@@ -17,6 +22,6 @@ public class InformativeScene : MonoBehaviour
     }
 
     void setNewScene(){
-         SceneManager.LoadScene("Opening Menu");
+         SceneManager.LoadScene("HomeScene");
     }
 }

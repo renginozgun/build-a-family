@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Gameplay : MonoBehaviour
 {
+
+    [SerializeField]
+    private Button closeButton;
+    
     void Start()
     {
-        Invoke("setNewScene", 5f);
+        closeButton.onClick.AddListener(setNewScene);
     }
 
     // Update is called once per frame

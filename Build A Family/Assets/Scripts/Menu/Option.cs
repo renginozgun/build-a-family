@@ -42,6 +42,10 @@ public class Option : MonoBehaviour
             case "Gameplay":
                 GamePlay();
                 break;
+                
+            case "Gameplay_in":
+                GamePlayIn();
+                break;
 
             case "Quit":
                 Quit();
@@ -57,6 +61,11 @@ public class Option : MonoBehaviour
     void GamePlay()
     {
         SceneManager.LoadScene("Gameplay");
+    }
+
+    void GamePlayIn()
+    {
+        SceneManager.LoadScene("Gameplay_in");
     }
 
     public static void Retry(){
