@@ -72,6 +72,7 @@ public class Option : MonoBehaviour
 
         Destroy(SaveLocation.Instance);
         PuzzleManagement.totalSolvedPuzzles=0;
+        PuzzleManagement.resetPuzzleObjectMap();
         SceneManager.LoadScene("HomeScene");
     }
 

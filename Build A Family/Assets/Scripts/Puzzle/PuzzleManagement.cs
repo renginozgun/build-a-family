@@ -8,19 +8,17 @@ public class PuzzleManagement : MonoBehaviour
 {
     public static int totalSolvedPuzzles = 0;
 
-    public static IDictionary<string, bool> solvedItemsMap = new Dictionary<string, bool>();
+    public static IDictionary<string, bool>
+        solvedItemsMap = new Dictionary<string, bool>();
 
     public static bool tempFlag = true;
-    // [SerializeField] 
-    // private  Text solvedPuzzleStatus;
 
+    // [SerializeField]
+
+    // private  Text solvedPuzzleStatus;
     private static bool updateBar = false;
 
- 
-
     public static string selectedObject;
-
-
 
     void Awake()
     {
@@ -38,29 +36,21 @@ public class PuzzleManagement : MonoBehaviour
             solvedItemsMap.Add("Bear", false);
             solvedItemsMap.Add("Tree", false);
             tempFlag = false;
-
         }
     }
 
     void Start()
     {
-
     }
-
-
-
 
     public static void updateTotalSolvedPuzzles()
     {
-
         totalSolvedPuzzles++;
 
         PuzzleUIController.triggerPuzzleUIUpdate();
         HomeUIController.triggerHomeUIUpdate();
 
         solvedItemsMap[selectedObject] = true;
-
-
     }
 
     void OnMouseDown()
@@ -71,9 +61,18 @@ public class PuzzleManagement : MonoBehaviour
 
     public static void setPuzzleObjectMap()
     {
-
     }
-    
 
-
+    public static void resetPuzzleObjectMap()
+    {
+        solvedItemsMap["Hat"] = false;
+        solvedItemsMap["Necklace"] = false;
+        solvedItemsMap["Broom"] = false;
+        solvedItemsMap["Plate"] = false;
+        solvedItemsMap["Jacket"] = false;
+        solvedItemsMap["Dress"] = false;
+        solvedItemsMap["Drawing"] = false;
+        solvedItemsMap["Bear"] = false;
+        solvedItemsMap["Tree"] = false;
+    }
 }
