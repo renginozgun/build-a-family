@@ -355,7 +355,8 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: The Dad stresses him out. Try to escape him in the house, or you will lose
-    1 minute of your time.
+    1 minute of your time. Hold X to protect yoursef from time damage. You will have
+    10 seconds to recover after each damage.
 --- !u!222 &521301615
 CanvasRenderer:
   m_ObjectHideFlags: 0

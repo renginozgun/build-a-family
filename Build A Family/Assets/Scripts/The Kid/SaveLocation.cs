@@ -12,6 +12,7 @@ public class SaveLocation : MonoBehaviour
     public Vector3 SpawnRotation = new Vector3(0, 0, 0);
 
     public float timeValue = 660;
+    public float latestTimeDamageValue = 660;
 
     public bool flag = true;
 

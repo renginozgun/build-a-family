@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    [SerializeField]
+    public Text damageText;
+
+    [SerializeField]
+    public AudioSource damageSoundEffect;
+
     public static float timeValue = 660;
 
     public Text timeText;
@@ -16,8 +22,12 @@ public class Timer : MonoBehaviour
 
     public static float latestDamageTime = 0;
 
+    public static bool allowTimeDamage = true;
+
     void Start()
     {
+        damageText.enabled = false;
+
         if (SaveLocation.Instance != null)
         {
             timeValue = SaveLocation.Instance.timeValue;
@@ -26,29 +36,40 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
+        //Allow time damage after at least 10 seconds passes after latest damage
+        if (
+            (
+            SaveLocation.Instance.latestTimeDamageValue -
+            SaveLocation.Instance.timeValue
+            ) >=
+            10
+        )
+        {
+            allowTimeDamage = true;
+        }
+
         if (SaveLocation.Instance.timeValue > 0)
         {
             SaveLocation.Instance.timeValue -= Time.deltaTime;
 
             //If damage is triggered decrease the time left by 10 seconds
-            if (damageTrigger)
+            if (damageTrigger && allowTimeDamage)
             {
                 SaveLocation.Instance.timeValue -= 60;
-                damageTrigger = false;
-                latestDamageTime = SaveLocation.Instance.timeValue;
-            }
+                damageText.enabled = true;
 
-/*             //Allow time damage after at least 10 seconds pass
-            if ((latestDamageTime - timeValue) >= 10)
-            {
-                TimeDamage.allowTimeDamage = true;
-            } */
+                allowTimeDamage = false;
+                damageSoundEffect.Play();
+                Invoke("hideDamageText", 2f);
+                SaveLocation.Instance.latestTimeDamageValue =
+                    SaveLocation.Instance.timeValue;
+            }
         }
         else
         {
             SaveLocation.Instance.timeValue = 0;
         }
-        DisplayTime (SaveLocation.Instance.timeValue);
+        DisplayTime(SaveLocation.Instance.timeValue);
 
         if (SaveLocation.Instance.timeValue == 0)
         {
@@ -75,13 +96,17 @@ public class Timer : MonoBehaviour
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-   /*  private void OnDestroy()
+    /*  private void OnDestroy()
     {
         SaveLocation.Instance.timeValue = timeValue;
     } */
-
     public static float getCurrentTime()
     {
         return timeValue;
+    }
+
+    public void hideDamageText()
+    {
+        damageText.enabled = false;
     }
 }
