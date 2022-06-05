@@ -11,6 +11,9 @@ public class FinalSceneScript : MonoBehaviour
     AudioSource kidVoice;
 
     [SerializeField]
+    GameObject slothIcon;
+    
+    [SerializeField]
     GameObject hat;
 
     [SerializeField]
@@ -70,6 +73,11 @@ public class FinalSceneScript : MonoBehaviour
     private PlayableDirector animation;
 
     [SerializeField]
+    public GameObject start_timeline;
+
+    private PlayableDirector start_animation;
+
+    [SerializeField]
     public GameObject timeline;
 
     Stack sloth = new Stack();
@@ -77,6 +85,8 @@ public class FinalSceneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        start_animation = start_timeline.GetComponent<PlayableDirector>();
+        start_animation.Play();
         InitializeSloth();
 
         animation= timeline.GetComponent<PlayableDirector>();
@@ -134,10 +144,11 @@ public class FinalSceneScript : MonoBehaviour
 //play the animation and set new scene after sloth is finished
         if (sloth.Count == 0)
         {
+            slothIcon.SetActive(false);
             animation.Play();
             putText.text = "";
 
-            Invoke("S", 20f);
+            Invoke("SetStatScene", 20f);
         }
     }
 
