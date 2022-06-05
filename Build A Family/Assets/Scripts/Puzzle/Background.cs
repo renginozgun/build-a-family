@@ -34,11 +34,11 @@ public class Background : MonoBehaviour
                 break;
             case "Dress":
                 rend.sharedMaterial = materials[1];
-                story.text="This one was my Mom's favorite dress that Dad bought. One day she was so upset that she cut it. I want her to wear it again because she looks so pretty again.";
+                story.text="This one was my Mom's favorite dress that Dad bought. One day she was so upset that she cut it. I want her to wear it again because she looks so pretty in it.";
                 break;
             case "Necklace":
                 rend.sharedMaterial = materials[2];
-                story.text="Dad gifted this necklace to Mom before he quit his job. I love that it's so shiny. Maybe If I fix it I make her happy.";
+                story.text="Dad gifted this necklace to Mom before he quit his job. I love that it's so shiny. Maybe If I fix it I will make her happy.";
                 break;
             case "Jacket":
                 rend.sharedMaterial = materials[0];

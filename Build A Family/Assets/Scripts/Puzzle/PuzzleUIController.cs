@@ -28,7 +28,7 @@ public class PuzzleUIController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Escape key was pressed");
+      
             SceneManager.LoadScene("HomeScene");
         }
     }

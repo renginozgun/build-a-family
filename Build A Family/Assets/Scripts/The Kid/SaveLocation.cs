@@ -34,8 +34,7 @@ public class SaveLocation : MonoBehaviour
             if(PuzzleManagement.totalSolvedPuzzles==9 && flag){
 
                 AnalyticsResult analyticsResult=Analytics.CustomEvent("GameCompletionTime" + timeValue); //Send analytics to unity analytics
-                Debug.Log("analytics result:"  + analyticsResult);
-
+                
                 SceneManager.LoadScene("Final Scene");
                 flag=false;
             }

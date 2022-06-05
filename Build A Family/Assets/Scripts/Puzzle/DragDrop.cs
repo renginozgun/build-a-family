@@ -17,8 +17,6 @@ public class DragDrop : MonoBehaviour
     //isInRight place indicates the selected puzzle piece is placed in the correct position and disables moving again
     private bool isInRightPlace = false;
 
-    //correctedPieces holds the total number of corrected puzzle pieces 
-    private static int correctedPieces = 0;
 
     double tempX;
     double tempY;
@@ -126,7 +124,6 @@ public class DragDrop : MonoBehaviour
             if (tag == "Hat" || tag== "Tree") item.increaseCorrectedPieces(4); // Hat puzzle containts only one piece to solve. We handle the exception by marking it as completed at one call. 
             else item.increaseCorrectedPieces();
 
-            Debug.Log("Succes= " + item.getCorrectedPieces());
 
         }
 

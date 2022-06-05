@@ -17,10 +17,6 @@ public class TimeDamage : MonoBehaviour
     [SerializeField]
     Camera cam;
 
-    float maxRange = 5;
-
-    bool temp = true;
-
     RaycastHit hit;
 
     private float distance;
