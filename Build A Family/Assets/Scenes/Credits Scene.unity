@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -223,7 +223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1286}
+  m_AnchoredPosition: {x: 0, y: -1317}
   m_SizeDelta: {x: 500, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823068397
@@ -247,7 +247,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 31ba7c3fe5a8be64dbdfa74603f8a470, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
@@ -259,12 +259,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'TEAM LEADER
+  m_Text: 'PRODUCT OWNER
 
 
-
-    PROJECT OWNER
-
+    SCRUM MASTER
 
 
     DEVELOPER TEAM
@@ -272,7 +270,8 @@ MonoBehaviour:
 
 
 
-    GAME ARTIST
+
+    DESIGN
     TEAM
 
 
@@ -282,20 +281,25 @@ MonoBehaviour:
 
 
 
+
     SOUND DESING
 
 
 
-    VOICEOWNER
+    VOICEOVER
 
 
 
-    BUG FINDER
 
 
 
-    SPECIAL
-    THANKS'
+
+    GAME
+    TESTER
+
+
+
+    SPECIAL THANKS'
 --- !u!222 &823068398
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -303,6 +307,120 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 823068395}
+  m_CullTransparentMesh: 1
+--- !u!1 &905068214
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 905068215}
+  - component: {fileID: 905068217}
+  - component: {fileID: 905068216}
+  m_Layer: 5
+  m_Name: 'Titles_2 '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &905068215
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905068214}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2067792722}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -1540}
+  m_SizeDelta: {x: 500, y: 1100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &905068216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905068214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 5519ada0737a3bd4585c69e9edb79f54, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    THE DAD
+
+
+    THE KID
+
+
+    THE MOM
+
+
+
+
+
+'
+--- !u!222 &905068217
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 905068214}
   m_CullTransparentMesh: 1
 --- !u!1 &967014231
 GameObject:
@@ -338,8 +456,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -1286}
-  m_SizeDelta: {x: 500, y: 1100}
+  m_AnchoredPosition: {x: 0, y: -1447}
+  m_SizeDelta: {x: 500, y: 1380}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &967014233
 MonoBehaviour:
@@ -354,7 +472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.735849, g: 0.53931326, b: 0.03123886, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -362,11 +480,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 31ba7c3fe5a8be64dbdfa74603f8a470, type: 3}
     m_FontSize: 18
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -374,82 +492,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '
-
-
-    RENGIN OZGUN AKBOR
-
-
-
-
-    IREM BESTE UNLU
-
-
-
-
-    RENGIN BESTE
-    AKBOR
-
-    BATUHAN OZBAS
-
-    DINCER OZBEY
-
-
-
-    OKTAY SEZER
-
-    IREM BESTE
-    UNLU
-
-
-
-
-    IREM BESTE UNLU
-
-    RENGIN OZGUN AKBOR
-
-
-
-
-
-    RENGIN OZGUN AKBOR
-
-
-
-    DINCER
-    OZBEY (DAD)
-
-    BESTE''S BROTHER (KID)
-
-
-
-
-    OKTAY SEZER
-
-
-
-
-    TOLGAY HICKIRAN
-
-
-    OYUN
-    VE UYGULAMA
-
-    AKADEMISI
-
-
-    GIRISIMCILIK VAKFI
-
-
-    T3 GIRISIMCILIK VAKFI
-
-
-    CUMHURBASKANLIFI
-    DIJITAL
-
-    DONUSUM OFISI
-
-'
+  m_Text: "\n\nIREM BESTE \xDCNL\xDC\n\n\nRENG\u0130N \xD6ZG\xDCN AKBIR\n\n\nRENG\u0130N
+    \xD6ZG\xDCN AKBOR\nBATUHAN \xD6ZBA\u015E\nD\u0130N\xC7ER \xD6ZBEY\n\u0130REM
+    BESTE \xDCNL\xDC\n\n\n\nAHMET OKTAY SEZER\nIREM BESTE \xDCNL\xDC\n\n\nIREM BESTE
+    \xDCNL\xDC\nRENG\u0130N \xD6ZG\xDCN AKBOR\nAHMET OKTAY SEZER\nD\u0130N\xC7ER
+    \xD6ZBEY\n\n\n\nRENG\u0130N \xD6ZG\xDCN AKBOR\n\n\n\n\n\nD\u0130N\xC7ER \xD6ZBEY\n\nAL\u0130
+    SARP \xDCNL\xDC\n\nRENG\u0130N \xD6ZG\xDCN AKBOR\n\n\n\n\nAHMET OKTAY SEZER\n\n\n\nTOLGAY
+    HI\xC7KIRAN\n\nOYUN VE UYGULAMA\nAKADEMISI\n\nGIRISIMCILIK VAKFI\n\nT3 GIRISIMCILIK
+    VAKFI\n\nCUMHURBASKANLIFI DIJITAL\nDONUSUM OFISI\n"
 --- !u!222 &967014234
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -902,7 +952,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 31ba7c3fe5a8be64dbdfa74603f8a470, type: 3}
     m_FontSize: 35
     m_FontStyle: 0
     m_BestFit: 0
@@ -954,6 +1004,7 @@ RectTransform:
   - {fileID: 967014232}
   - {fileID: 823068396}
   - {fileID: 2022489453}
+  - {fileID: 905068215}
   m_Father: {fileID: 1086234444}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
