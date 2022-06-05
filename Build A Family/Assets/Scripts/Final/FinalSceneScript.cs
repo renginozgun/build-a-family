@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class FinalSceneScript : MonoBehaviour
 {
-     [SerializeField]
+    [SerializeField]
     AudioSource kidVoice;
 
     [SerializeField]
@@ -77,7 +77,7 @@ public class FinalSceneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initializeSloth();
+        InitializeSloth();
 
         animation= timeline.GetComponent<PlayableDirector>();
     }
@@ -85,6 +85,8 @@ public class FinalSceneScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Pop elements from the sloth one by one untill no item remains
+
         if (Input.GetKeyDown(KeyCode.P) && sloth.Count != 0)
         {
             var item = sloth.Pop();
@@ -129,17 +131,18 @@ public class FinalSceneScript : MonoBehaviour
                     break;
             }
         }
-
+//play the animation and set new scene after sloth is finished
         if (sloth.Count == 0)
         {
             animation.Play();
             putText.text = "";
 
-            Invoke("setStatScene", 20f);
+            Invoke("S", 20f);
         }
     }
 
-    void initializeSloth()
+//Initialize the elements of the item sloth
+    void InitializeSloth()
     {
         sloth.Push("Drawing");
         sloth.Push("Plate");
@@ -152,7 +155,7 @@ public class FinalSceneScript : MonoBehaviour
         sloth.Push("Broom");
     }
 
-    private void setStatScene()
+    private void SetStatScene()
     {
         SceneManager.LoadScene("StatsScene");
     }

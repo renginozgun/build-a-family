@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour
 {
     [SerializeField]
     public Text damageText;
+    [SerializeField]
+    public RawImage damageArrow;
 
     [SerializeField]
     public AudioSource damageSoundEffect;
@@ -27,6 +29,7 @@ public class Timer : MonoBehaviour
     void Start()
     {
         damageText.enabled = false;
+        damageArrow.enabled=false;
 
         if (SaveLocation.Instance != null)
         {
@@ -57,6 +60,7 @@ public class Timer : MonoBehaviour
             {
                 SaveLocation.Instance.timeValue -= 60;
                 damageText.enabled = true;
+                damageArrow.enabled=true;
 
                 allowTimeDamage = false;
                 damageSoundEffect.Play();
@@ -109,5 +113,6 @@ public class Timer : MonoBehaviour
     public void hideDamageText()
     {
         damageText.enabled = false;
+        damageArrow.enabled=false;
     }
 }

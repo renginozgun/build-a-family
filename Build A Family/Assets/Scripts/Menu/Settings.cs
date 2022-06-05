@@ -21,7 +21,7 @@ public class Settings : MonoBehaviour
           onButtonClick();
       }
     }
-
+//Open pause menu on escape click 
     void onButtonClick()
     {
         SceneManager.LoadScene("Pause Menu");

@@ -5,7 +5,7 @@ using UnityEngine;
 public class NpcPathWalk : MonoBehaviour
 {
     
-    [SerializeField] GameObject Jake;
+    [SerializeField] GameObject theDad;
 
      private Vector3 initialPivotPosition = new Vector3(-26.04f, 0.3672122f, -1.317f); //0
 
@@ -18,16 +18,16 @@ public class NpcPathWalk : MonoBehaviour
 
     void Update()
     {
-        if (Jake.transform.position == initialPivotPosition )
+        if (theDad.transform.position == initialPivotPosition )
         {
            
             this.gameObject.transform.localPosition = firstPivotPosition;
         }
-        else if (Jake.transform.localPosition == firstPivotPosition)
+        else if (theDad.transform.localPosition == firstPivotPosition)
         {
             this.gameObject.transform.localPosition = secondPivotPosition;
         }
-        else if (Jake.transform.localPosition == secondPivotPosition)
+        else if (theDad.transform.localPosition == secondPivotPosition)
         {
             this.gameObject.transform.localPosition = initialPivotPosition;
         }

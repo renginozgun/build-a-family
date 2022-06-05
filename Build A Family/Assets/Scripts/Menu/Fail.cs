@@ -14,10 +14,8 @@ public class Fail : MonoBehaviour
         btn.onClick.AddListener(onButtonClick);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+
+//Set button clicks for Final scene
 
     void onButtonClick()
     {
