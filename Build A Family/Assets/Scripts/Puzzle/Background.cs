@@ -46,11 +46,11 @@ public class Background : MonoBehaviour
                 break;
             case "Drawing":
                 rend.sharedMaterial = materials[3];
-                story.text="I did this drawing. When I showed it to Mom, first she smiled, then cried and tear it apart. Maybe she didn't like it but I wanna keep it in my room.";
+                story.text="I did this drawing. When I showed it to Mom, first she smiled, then cried and tore it apart. Maybe she didn't like it but I wanna keep it in my room.";
                 break;
             case "Hat":
                 rend.sharedMaterial = materials[6];
-                story.text="This hat belonged to my grandpa. They argued for so long one day, and my grandpa never came back.";
+                story.text="This hat belonged to my Grandpa. But one day Dad and Grandpa argued for so long, and my grandpa never came back.";
                 break;
             case "Bear":
                 rend.sharedMaterial = materials[6];
@@ -58,7 +58,7 @@ public class Background : MonoBehaviour
                 break;
             case "Tree":
                 rend.sharedMaterial = materials[6];
-                story.text="I love decorating trees. But Dad always trip and fall on it.";
+                story.text="I love decorating trees. But Dad always trips and falls on it.";
                 break;
         }
     }
