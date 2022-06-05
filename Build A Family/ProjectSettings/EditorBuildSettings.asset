@@ -4,5 +4,41 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 4f70d0d5004cc644cb060ef5c029b7f3
+  - enabled: 1
+    path: Assets/Scenes/Informative Opening.unity
+    guid: d7f28fed046aff7479f5e8f23e11428e
+  - enabled: 1
+    path: Assets/Scenes/Opening Menu.unity
+    guid: bf9ae8bebf8872243a2fda3f2111d5b9
+  - enabled: 1
+    path: Assets/Scenes/Gameplay.unity
+    guid: 63cd28fb62767604ea9db7d8b789decc
+  - enabled: 1
+    path: Assets/Scenes/HomeScene.unity
+    guid: 8cb97ba90ac72ec43a641ad5b9d6fce2
+  - enabled: 1
+    path: Assets/Scenes/Puzzle Scene.unity
+    guid: 2129ae277fe04844faad990a06019922
+  - enabled: 1
+    path: Assets/Scenes/Gameplay_in.unity
+    guid: 86f5e8b5bfe2a164a81e49e6b31f9861
+  - enabled: 1
+    path: Assets/Scenes/Pause Menu.unity
+    guid: 59921b57d5555674a929bda53c333094
+  - enabled: 1
+    path: Assets/Scenes/Final Scene.unity
+    guid: 067aa471789a7a94f8e34b5195584ad6
+  - enabled: 1
+    path: Assets/Scenes/StatsScene.unity
+    guid: 11fe24a84186e3a44bae952e877b8baf
+  - enabled: 1
+    path: Assets/Scenes/Fail Scene.unity
+    guid: 5b2ddcc7fa765354ab25ad5880d1e1cc
+  - enabled: 1
+    path: Assets/Scenes/Credits Scene.unity
+    guid: 6596106413651a247998a894879cd6ee
   m_configObjects: {}

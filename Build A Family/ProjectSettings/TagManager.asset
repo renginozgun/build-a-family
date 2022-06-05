@@ -3,12 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Draggable
+  - Puzzle Scene
+  - Puzzle Scene2
+  - Plate
+  - Hat
+  - Broom
+  - Dress
+  - Jacket
+  - Necklace
+  - Bear
+  - Drawing
+  - Tree
+  - Dad
+  - Retry
+  - Exit
+  - Music
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - 
