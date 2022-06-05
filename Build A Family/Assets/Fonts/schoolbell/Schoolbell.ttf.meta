@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5519ada0737a3bd4585c69e9edb79f54
+guid: e7b549a6e78d45d4c9e4f5ebfcd39db0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - StrawberryPinkChild
+  - Schoolbell
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

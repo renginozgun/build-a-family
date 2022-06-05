@@ -4005,7 +4005,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5519ada0737a3bd4585c69e9edb79f54, type: 3}
+    m_Font: {fileID: 12800000, guid: e7b549a6e78d45d4c9e4f5ebfcd39db0, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -4698,7 +4698,7 @@ RectTransform:
   m_GameObject: {fileID: 448013713}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.99, y: 0.99, z: 0.99}
   m_Children:
   - {fileID: 1386844092}
   - {fileID: 1339217931}
@@ -4707,7 +4707,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 815, y: 500}
+  m_AnchoredPosition: {x: 816, y: 509.45}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &448013715
@@ -4748,8 +4748,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5519ada0737a3bd4585c69e9edb79f54, type: 3}
-    m_FontSize: 80
+    m_Font: {fileID: 12800000, guid: e7b549a6e78d45d4c9e4f5ebfcd39db0, type: 3}
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -11994,14 +11994,14 @@ RectTransform:
   m_GameObject: {fileID: 1449500907}
   m_LocalRotation: {x: 0.00015462612, y: -0.0837974, z: -0.024005145, w: 0.99619365}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.81343, y: 0.81343, z: 0.81343}
   m_Children: []
   m_Father: {fileID: 1344309390}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -0.213, y: -9.611, z: -2.743}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 834, y: 394}
+  m_AnchoredPosition: {x: 814, y: 399}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1449500909
@@ -12025,7 +12025,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 5519ada0737a3bd4585c69e9edb79f54, type: 3}
+    m_Font: {fileID: 12800000, guid: e7b549a6e78d45d4c9e4f5ebfcd39db0, type: 3}
     m_FontSize: 55
     m_FontStyle: 0
     m_BestFit: 0
