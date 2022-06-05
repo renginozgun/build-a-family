@@ -70,6 +70,9 @@ public class FinalSceneScript : MonoBehaviour
     [SerializeField]
     Text putText;
 
+    [SerializeField]
+    Text theEnd;
+
     private PlayableDirector animation;
 
     [SerializeField]
@@ -85,6 +88,7 @@ public class FinalSceneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        theEnd.enabled = false;
         start_animation = start_timeline.GetComponent<PlayableDirector>();
         start_animation.Play();
         InitializeSloth();
@@ -146,6 +150,7 @@ public class FinalSceneScript : MonoBehaviour
         {
             slothIcon.SetActive(false);
             animation.Play();
+            theEnd.enabled = true;
             putText.text = "";
 
             Invoke("SetStatScene", 20f);
