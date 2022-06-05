@@ -15,7 +15,7 @@ public class Statistics : MonoBehaviour
     void Start()
     {
         setTexts();
-
+        Invoke("setCreditScene", 15f);
     }
 
     public void setTexts()
@@ -32,6 +32,6 @@ public class Statistics : MonoBehaviour
 
     }
 
-    
+    public void setCreditScene() { SceneManager.LoadScene("Credits Scene"); }
 
 }
