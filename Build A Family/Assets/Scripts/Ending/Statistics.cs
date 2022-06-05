@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class Statistics : MonoBehaviour
 {
 
@@ -13,6 +15,7 @@ public class Statistics : MonoBehaviour
     void Start()
     {
         setTexts();
+
     }
 
     public void setTexts()
@@ -28,4 +31,7 @@ public class Statistics : MonoBehaviour
       fourthText.text="Help them build a family.";
 
     }
+
+    
+
 }

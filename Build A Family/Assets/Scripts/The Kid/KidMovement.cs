@@ -10,7 +10,7 @@ public class KidMovement : MonoBehaviour
 
     public Rigidbody playerRigid;
     public float w_speed, wb_speed, olw_speed, rn_speed, ro_speed;
-    public bool walk, lTurn, rTurn, walkBack, walkFast;
+    public bool walk, lTurn, rTurn, walkBack, walkFast, crouch;
 
     public Transform playerTrans;
     public static Transform latestKidPosition;
@@ -121,13 +121,37 @@ public class KidMovement : MonoBehaviour
                 walkFast = false;
 
             }
+
+            if(Input.GetKeyDown(KeyCode.Space)){
+                walkFast = false;
+                crouch=true;
+            }
+            if(Input.GetKeyUp(KeyCode.Space)){
+                crouch=false;
+            }
             walkingSound.mute = false;
         }
         else
         {
             playerRigid.velocity = new Vector3(0, 0, 0);
             walkingSound.mute = true;
+            crouch=false;
 
+        }
+
+        if(walkBack){
+
+            if(Input.GetKeyDown(KeyCode.Space)){
+               
+                crouch=true;
+            }
+            if(Input.GetKeyUp(KeyCode.Space)){
+                crouch=false;
+            }
+
+            walkingSound.mute = false;
+        }else{
+            walkingSound.mute = true;
         }
 
 
@@ -149,11 +173,14 @@ public class KidMovement : MonoBehaviour
         if (walk)
         {
             playerAnimation.SetBool("Walk Fast", walkFast);
+             playerAnimation.SetBool("CrouchWalk", crouch);
         }
         else if (!walk)
         {
             playerAnimation.SetBool("Walk Fast", false);
+            playerAnimation.SetBool("CrouchWalk", false);
         }
+
 
         if(lTurn || rTurn){
             if(walk){

@@ -34,19 +34,25 @@ public class TimeDamage : MonoBehaviour
     void Update()
     {
         //Checks whether TheDad is in the field of Kid's view
-        if (!Input.GetKey(KeyCode.Space))
-        {
+
             if (checkVisibility())
             {
-                status.enabled = true;
-                Timer.damageTrigger = true;
+                //Check wheter user presses Space
+                if(Input.GetKey(KeyCode.Space)){
+                    status.enabled = false;
+                    Timer.damageTrigger = false;   
+                }else{
+                    status.enabled = true;
+                    Timer.damageTrigger = true;   
+                }
+
             }
             else
             {
                 Timer.damageTrigger = false;
                 status.enabled = false;
             }
-        }
+        
     }
 
     bool checkVisibility()
