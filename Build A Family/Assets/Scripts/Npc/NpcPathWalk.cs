@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NpcPathWalk : MonoBehaviour
 {
-    
+    //theDad
     [SerializeField] GameObject theDad;
 
      private Vector3 initialPivotPosition = new Vector3(-26.04f, 0.3672122f, -1.317f); //0

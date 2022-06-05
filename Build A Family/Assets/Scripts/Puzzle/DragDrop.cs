@@ -9,7 +9,8 @@ public class DragDrop : MonoBehaviour
     private Vector3 mOffset;
 
     private float mZCoord;
-
+//Contains the correct pieces and boundry values of each puzzle object by their tags.
+//Boundry values determines the acceptable boundries that user places items on
     private IDictionary<string, PuzzleObject> puzzleByTag = new Dictionary<string, PuzzleObject>();
     private PuzzleObject item;
 
@@ -27,7 +28,7 @@ public class DragDrop : MonoBehaviour
     {
 
 
-
+//Initialize puzzle values 
         if (flag)
         {
             puzzleByTag.Add("Plate", new PuzzleObject(new Vector3(0, 0, 0), new Boundries(-0.2, 0.2), new Boundries(-0.2, 0.2), new Boundries(-0.2, 0.2)));
@@ -43,6 +44,7 @@ public class DragDrop : MonoBehaviour
         }
     }
 
+//Get the item based on its tag
     private void Start()
     {
         item = puzzleByTag[tag];
@@ -51,13 +53,13 @@ public class DragDrop : MonoBehaviour
 
     private void Update()
     {
-
+//Update the number of total solved puzzles when correct pieces reach 4
         if (item.getCorrectedPieces() == 4)
         {
-            PuzzleManagement.updateTotalSolvedPuzzles();
+            PuzzleManagement.UpdateTotalSolvedPuzzles();
 
             PuzzleUIController.onCloseButtonClick();
-            item.setCorrectedPieces(0); //TODO delete later
+            item.setCorrectedPieces(0); 
         }
        
     }
@@ -65,7 +67,7 @@ public class DragDrop : MonoBehaviour
 
     private void OnMouseDown()
     {
-
+//If the piece is not in correct place, allow on mouse down
         if (!isInRightPlace)
         {
             mZCoord = Camera.main.WorldToScreenPoint(this.gameObject.transform.position).z;
@@ -75,7 +77,7 @@ public class DragDrop : MonoBehaviour
 
 
     }
-
+//If the piece is not in correct place, allow on mouse drag
     private void OnMouseDrag()
     {
         if (!isInRightPlace)
@@ -84,17 +86,18 @@ public class DragDrop : MonoBehaviour
 
         }
     }
-
+//If the piece is not in correct place, allow on mouse up
     private void OnMouseUp()
     {
+        //Check for corectness when user drops the piece
         if (!isInRightPlace)
         {
-            checkSuccessStatus(this.transform.localPosition.x, this.transform.localPosition.z);
+            CheckSuccessStatus(this.transform.localPosition.x, this.transform.localPosition.z);
         }
 
 
     }
-
+//Get the mouse click item on 3d world
     private Vector3 GetMouseWorldPos()
     {
 
@@ -105,8 +108,8 @@ public class DragDrop : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 
-
-    private void checkSuccessStatus(float xValue, float zValue)
+//Check the corectness based on boundry values
+    private void CheckSuccessStatus(float xValue, float zValue)
     {
         item = puzzleByTag[tag];
 
@@ -115,7 +118,7 @@ public class DragDrop : MonoBehaviour
             (zValue < item.z.max && zValue > item.z.min)
         )
         {
-
+            //Correct the piece
             this.transform.localPosition = item.correctPosition;
             this.GetComponent<Renderer>().material.SetColor("_Color", Color.white);
             isInRightPlace = true;

@@ -13,12 +13,6 @@ public class OpeningSound : MonoBehaviour
         Invoke("Play", 2f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    
-    }
 
     void Play(){
         audioData.Play();

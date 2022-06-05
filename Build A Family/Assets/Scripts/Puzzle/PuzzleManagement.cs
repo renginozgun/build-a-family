@@ -4,8 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+//Puzzle management manages  completed vs not completed puzzles and hold information of completed puzzles.
 public class PuzzleManagement : MonoBehaviour
 {
+    
     public static int totalSolvedPuzzles = 0;
 
     public static IDictionary<string, bool>
@@ -13,9 +15,6 @@ public class PuzzleManagement : MonoBehaviour
 
     public static bool tempFlag = true;
 
-    // [SerializeField]
-
-    // private  Text solvedPuzzleStatus;
     private static bool updateBar = false;
 
     public static string selectedObject;
@@ -43,26 +42,24 @@ public class PuzzleManagement : MonoBehaviour
     {
     }
 
-    public static void updateTotalSolvedPuzzles()
+//When a puzzle is complete trigger the game UI to refresh itself
+    public static void UpdateTotalSolvedPuzzles()
     {
         totalSolvedPuzzles++;
 
         PuzzleUIController.triggerPuzzleUIUpdate();
-        HomeUIController.triggerHomeUIUpdate();
+        HomeUIController.TriggerHomeUIUpdate();
 
         solvedItemsMap[selectedObject] = true;
     }
-
+//When a puzzle object is clicked load puzzle scene
     void OnMouseDown()
-    {
-        SceneManager.LoadScene("Puzzle Scene");
+    { 
         selectedObject = this.tag;
+        SceneManager.LoadScene("Puzzle Scene");
+       
     }
-
-    public static void setPuzzleObjectMap()
-    {
-    }
-
+//Reset puzzle object only on RETRY
     public static void resetPuzzleObjectMap()
     {
         solvedItemsMap["Hat"] = false;

@@ -8,7 +8,7 @@ public class OpeningScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("setNewScene", 6f);
+        Invoke("SetNewScene", 6f);
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class OpeningScene : MonoBehaviour
         
     }
 
-    void setNewScene(){
+    void SetNewScene(){
          SceneManager.LoadScene("Informative Opening");
     }
 }

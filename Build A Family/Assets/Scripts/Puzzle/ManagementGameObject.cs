@@ -31,14 +31,7 @@ public class ManagementGameObject : MonoBehaviour
 
     }
 
-    public static void updateHomeSceneStatusBar()
-    {
-
-        updateBar = true;
-
-    }
-
-    public static void updateTotalSolvedPuzzles()
+    public static void UpdateTotalSolvedPuzzles()
     {
 
         totalSolvedPuzzles++;
@@ -48,6 +41,7 @@ public class ManagementGameObject : MonoBehaviour
     }
 
     // Update is called once per frame
+    //Continue decreasing the time on save location object
     void Update()
     {
          if (SaveLocation.Instance.timeValue > 0)

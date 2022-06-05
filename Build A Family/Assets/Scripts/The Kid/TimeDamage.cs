@@ -37,7 +37,7 @@ public class TimeDamage : MonoBehaviour
 
             if (checkVisibility())
             {
-                //Check wheter user presses Space
+                //Check wheter user presses Space or not
                 if(Input.GetKey(KeyCode.Space)){
                     status.enabled = false;
                     Timer.damageTrigger = false;   

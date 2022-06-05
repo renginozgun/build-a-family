@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class RenderHomePuzzleObjects : MonoBehaviour
 {
-    // Start is called before the first frame update
-void Awake(){
-
-    
-}
-
+//Render only non completed puzzles in HomeScene
     void Start()
     {
         var map = PuzzleManagement.solvedItemsMap;

@@ -21,15 +21,10 @@ public class KidMovement : MonoBehaviour
 
     public bool flag = false;
 
-    private void Awake()
-    {
-
-
-    }
 
     void Start()
     {
-        playerTrans.position = SaveLocation.Instance.SpawnLocation;
+        playerTrans.position = SaveLocation.Instance.SpawnLocation; //Gets the position of child from saved object 
         playerTrans.rotation = Quaternion.Euler(SaveLocation.Instance.SpawnRotation);
 
     }
@@ -37,7 +32,7 @@ public class KidMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-
+//Give velocity values on W or S click
         if (Input.GetKey(KeyCode.W))
         {
             playerRigid.velocity = transform.forward * w_speed * Time.deltaTime;
@@ -53,7 +48,7 @@ public class KidMovement : MonoBehaviour
     void Update()
     {
 
-
+//Set bool values on each click
         if (Input.GetKeyDown(KeyCode.W))
         {
 
@@ -161,7 +156,7 @@ public class KidMovement : MonoBehaviour
 
     }
 
-
+//Set animations
     private void setAnimations()
     {
 

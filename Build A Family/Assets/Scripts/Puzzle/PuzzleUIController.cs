@@ -10,7 +10,7 @@ public class PuzzleUIController : MonoBehaviour
     private Button closeButton;
 
 
-//manipulated by DragDrop script and indicates there is an update in number of solved puzzles
+//Manipulated by DragDrop script and indicates there is an update in number of solved puzzles
     public static bool isUpdated = false;
 
     // Start is called before the first frame update
@@ -24,7 +24,6 @@ public class PuzzleUIController : MonoBehaviour
     {
         if (isUpdated)
         {
-       
             isUpdated = false;
         }
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -39,8 +38,6 @@ public class PuzzleUIController : MonoBehaviour
     {
         isUpdated = true;
     }
-    // Update is called once per frame
-
 
 
 

@@ -13,7 +13,7 @@ public class InformativeScene : MonoBehaviour
     void Start()
     {
         btn= GetComponent<Button>();
-        btn.onClick.AddListener(setNewScene);
+        btn.onClick.AddListener(SetNewScene);
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class InformativeScene : MonoBehaviour
         
     }
 
-    void setNewScene(){
+    void SetNewScene(){
          SceneManager.LoadScene("Opening Menu");
     }
 }

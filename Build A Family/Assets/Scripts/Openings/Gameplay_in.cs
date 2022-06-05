@@ -12,7 +12,7 @@ public class Gameplay_in : MonoBehaviour
     
     void Start()
     {
-        closeButton.onClick.AddListener(setNewScene);
+        closeButton.onClick.AddListener(SetNewScene);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class Gameplay_in : MonoBehaviour
         
     }
 
-    void setNewScene(){
+    void SetNewScene(){
          SceneManager.LoadScene("HomeScene");
     }
 }

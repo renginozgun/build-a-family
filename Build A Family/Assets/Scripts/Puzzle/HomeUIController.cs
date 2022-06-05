@@ -13,7 +13,7 @@ public class HomeUIController : MonoBehaviour
 
     void Start()
     {
-        updateUIElements();
+        UpdateUIElements();
     }
 
     // Update is called once per frame
@@ -21,19 +21,19 @@ public class HomeUIController : MonoBehaviour
     {
           if (isUpdated)
         {
-            updateUIElements();
+            UpdateUIElements();
             isUpdated = false;
         }
     }
 
-    void updateUIElements()
+    void UpdateUIElements()
     {
 
         puzzleCounter.text = PuzzleManagement.totalSolvedPuzzles.ToString() + "/9";
      
     }
 
-     public static void triggerHomeUIUpdate()
+    public static void TriggerHomeUIUpdate()
     {
         isUpdated = true;
     }
