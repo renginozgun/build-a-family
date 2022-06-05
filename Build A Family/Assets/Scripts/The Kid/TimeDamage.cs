@@ -34,23 +34,12 @@ public class TimeDamage : MonoBehaviour
     void Update()
     {
         //Checks whether TheDad is in the field of Kid's view
-        if (!Input.GetKey(KeyCode.X))
+        if (!Input.GetKey(KeyCode.Space))
         {
             if (checkVisibility())
             {
                 status.enabled = true;
-
-                //  if (allowTimeDamage)
-                //  {
                 Timer.damageTrigger = true;
-                // damageText.enabled = true;
-
-                //Make time damage possible again in 10 seconds
-                //Make time damage text dissappear in 2 seconds
-
-                //  Invoke("setAllowTimeDamage", 10f);
-                //allowTimeDamage = false;
-                //  }
             }
             else
             {
