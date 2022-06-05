@@ -20,11 +20,12 @@ TagManager:
   - Retry
   - Exit
   - Music
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Wall
   - Water
   - UI
   - 
