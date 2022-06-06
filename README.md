@@ -2,7 +2,7 @@
 ## _"BUILD A FAMILY" PROJECT_  👪
 
 # Takım İsmi
-Karar aşamasında.
+Team Calypso
 
 # Ürün İle İlgili Bilgiler
 #### Takım Elemanları
@@ -21,8 +21,12 @@ Karar aşamasında.
 ### Ürün Açıklaması
 Build a Family, sizi bir çocuğun bakış açısından ailesiyle ilgili bir gizemi keşfetmeye davet ediyor. Zamana karşı yarışta
 evin içinde bulman gereken objeleri bulup, tamamlaman gereken tüm görevleri tamamlayabilirsen gizemi açığa çıkaracaksın. 
-Fakat görevleri tamamlaman o kadar kolay olmayacak, evin içinde anne ve babandan gizlenmeyi unutma! Bu oyun, çocuk istismarına dikkat çekmek amacıyla geliştirilmektedir.
+Fakat görevleri tamamlaman o kadar kolay olmayacak, evin içinde babandan gizlenmeyi unutma! Bu oyun, çocuk istismarına dikkat çekmek amacıyla geliştirilmektedir.
 `Atmosferik` `Öyküleme` `Keşif` `Puzzle`
+
+### Ürün Fiyatı
+Ürünü satışa çıkarmayı düşündüğümüzde, fiyatını 15TL olarak belirledik.
+
 
 ### Ürün Özellikleri
 - Third person yürüme
@@ -92,13 +96,16 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 
 - **Ürün Durumu Ekran Görüntüleri** :
 
+![Ekran görüntüsü 2022-05-23 200242](https://user-images.githubusercontent.com/47036671/169887517-2313a768-5289-4455-bf37-73f27e0eb5b9.png)
+
+![6136667d-2856-4da1-abe3-7c4668209f77](https://user-images.githubusercontent.com/47036671/169887651-b3f5429d-0807-483b-a83f-b1b0d38fd123.jpg)
+![Ekran görüntüsü 2022-05-23 200559](https://user-images.githubusercontent.com/47036671/169887528-deddeb05-acf9-45ed-ba06-f77c324ac059.png)
+![Ekran görüntüsü 2022-05-23 200621](https://user-images.githubusercontent.com/47036671/169887541-355c1a78-743a-4d12-8f9c-5bdd461fe6c3.png)
 ![Ekran görüntüsü 2022-05-23 195852](https://user-images.githubusercontent.com/47036671/169887493-4d283586-6e09-42c9-8d41-498f4f906822.png)
 ![Ekran görüntüsü 2022-05-23 195923](https://user-images.githubusercontent.com/47036671/169887501-3172d892-1729-4627-8cac-45bf1c449772.png)
 ![Ekran görüntüsü 2022-05-23 200214](https://user-images.githubusercontent.com/47036671/169887511-3a38fe5b-8786-46a7-bc4c-7b51c58050bd.png)
-![Ekran görüntüsü 2022-05-23 200242](https://user-images.githubusercontent.com/47036671/169887517-2313a768-5289-4455-bf37-73f27e0eb5b9.png)
-![Ekran görüntüsü 2022-05-23 200559](https://user-images.githubusercontent.com/47036671/169887528-deddeb05-acf9-45ed-ba06-f77c324ac059.png)
-![Ekran görüntüsü 2022-05-23 200621](https://user-images.githubusercontent.com/47036671/169887541-355c1a78-743a-4d12-8f9c-5bdd461fe6c3.png)
-![6136667d-2856-4da1-abe3-7c4668209f77](https://user-images.githubusercontent.com/47036671/169887651-b3f5429d-0807-483b-a83f-b1b0d38fd123.jpg)
+
+
 
 ### Sprint Review
 İkinci sprintte Ev sahnesindeki tüm eşyalar kuruldu, The Kid karakterinin kontrolleri ve animasyonları tamamlanıp evde gezebilir hale geldi, evdeki puzzzle eşyalar toplanabilir ve çözülebilir hale getirildi, böylece kullanıcı başından sonuna kadar oynayarak tüm puzzlearı toplayarak Final sahnesine geçebiliyor. Bu sprintte textureları da ev sahnesine eklemeyi hedeflemiştik ama başaramadık. Belli bir süre kısıtında belli puzzları tamamlama şartı file success/fail conditional durumlarını da geliştirdik. Gelecek sprintte kalan tüm taskları bitirerek bir oyun çıkarmayı hedefliyoruz.
@@ -106,4 +113,35 @@ Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözük
 ### Sprint Retrospective
 - Zaman azaldıkça branchleri mergelerken yaşadığımız conflictler bize çok maliyetli oluyor. Bu nedenle kalan zamanımızda kimin nerede çalışacağını iyi planlayıp çıkacka conflictleri minimuma indirmeyi hedefliyoruz.
 - Mayısın son haftasında final haftaları olduğundan projeyi 3-4 gün erken bitirecek şekilde planlama yapılacak.
+
+
+
+### Sprint 3
+
+- **Sprint Notları**: User storyler, Miro Board'da açıklanmıştır. Dependency ve açıklamaları da miro boardda yer almaktadır. Ayrıca yaptığımız tasklar Develop, Design ve Bug olmak üzere etiketlenmiştir.
+- **Sprint içinde tamamlanması tahmin edilen puan**: 69 puan
+- **Puan tamamlama mantığı**: Bu sprintte 69 puan tamamlamayı ekledik, mevcut özellikleri en iyi şekilde bitirme, ve testleri yapmayı planladık. 
+Story'ler yapılacak işlere (task'lere) bölünmüştür. Miro Board'da gözüken kırmızı item'lar yapılacak işleri (task) gösterirken, mavi item'lar story'leri temsil etmektedir.
+- **Daily Scrum** : Daily Scrum toplantılarının zamansal sebeplerden ötürü Slack üzerinden yapılmasına karar verilmiştir. Daily Scrum toplantısı örneği Google Docs olarak Readme'de tarafımızdan paylaşılmaktadır: https://docs.google.com/document/d/1w0T8vHhkVNlKHUC_t6eAb90yvOs2_Y9FJe9fx8IvQJg/edit?usp=sharing
+- **Sprint board updates** : 
+- 
+![Ekran görüntüsü 2022-06-06 205222](https://user-images.githubusercontent.com/47036671/172220466-470f5aab-8788-44ba-8f5f-9aa00adc6707.png)
+![Ekran görüntüsü 2022-06-06 205304](https://user-images.githubusercontent.com/47036671/172220476-83fd03e7-f9f5-41fe-af75-1d4c9f23a9ed.png)
+
+
+- **Ürün Durumu Ekran Görüntüleri** :
+![WhatsApp Image 2022-06-06 at 21 12 55 (1)](https://user-images.githubusercontent.com/47036671/172221507-ba4a0351-a853-441c-b601-7c1116a97bb3.jpeg)
+![WhatsApp Image 2022-06-06 at 21 12 55](https://user-images.githubusercontent.com/47036671/172221512-ee1324be-07d9-4c76-b8ea-a2f390c813ab.jpeg)
+![WhatsApp Image 2022-06-06 at 21 12 54 (2)](https://user-images.githubusercontent.com/47036671/172221523-d8a8093f-da3f-4a65-a7d5-83eb35224610.jpeg)
+![WhatsApp Image 2022-06-06 at 21 12 54 (1)](https://user-images.githubusercontent.com/47036671/172221529-ec5d0e26-8578-40f9-88d0-0002e9dbc440.jpeg)
+![WhatsApp Image 2022-06-06 at 21 12 54](https://user-images.githubusercontent.com/47036671/172221541-13cc7cdc-ebdf-44c3-92f1-a4c74fd993c2.jpeg)
+![WhatsApp Image 2022-06-06 at 21 12 53 (2)](https://user-images.githubusercontent.com/47036671/172221552-5e90148f-515c-46e9-9900-ab702b2b7971.jpeg)
+![WhatsApp Image 2022-06-06 at 21 12 53 (1)](https://user-images.githubusercontent.com/47036671/172221571-ee3ca544-56b2-4b73-96e2-4b8ec14c7bc7.jpeg)
+
+### Sprint Review
+
+Son sprintte projeye dair planladığımız her feature'ı tamamladık. Başından sonuna oynadığımızda, istediğimiz hikayeyi kullanıcıya hissettirebilen bir gameplay ortaya çıkardığımızı gördük. Bu sprint ev eşyalarına texture eklenmesi, oyunun UI tasarımı için ekip toplantıları ve onların uygulanması, timeline ve animasyonların eklenmesi, sound engineering yapılması, tüm sistemin test edilmesi, ve bugfixleri yapmakla geçti. Bu süreçte tasarımdan yazılıma bir çok şeyi gözden geçirdik, refactoring ve cleaning de yaptık. 
+
+### Sprint Retrospective
+Tüm proje sürecimizi değerlendirdiğimizde, ilk günkü buluşmamızdan bu yana hevesimizi ve motivasyonumuzu istikrarlı bir çalışma düzenindee gerçekleştirerek bu projeyi başarıyla tamamladığımızı görüyoruz. 6 haftalık düzenli bir çalışmanın sonucunda hepimizin oynamaktan keyif aldığı, verdiği sosyal mesaj ile gurur duyduğu bir oyun çıktı. Bu süreçte tasarımcı-yazılımcı iş birliğini çok iyi gerçekleştirdik, vizyonumuzdaki oyunu hem görsellik hem teknik performans olarak gerçeğine ulaştırabildik. Aldığımız buildi ve son halini version 1.0 windows olarak çıkarak bu projeyi noktalandırıyoruz.
 
