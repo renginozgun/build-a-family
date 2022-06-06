@@ -32,7 +32,13 @@ Fakat görevleri tamamlaman o kadar kolay olmayacak, evin içinde babandan gizle
 - Third person yürüme
 - Eşyalarla etkileşime geçme
 - Puzzle çözümü
-- Anne ve babadan kaçmadığın sürede zaman cezası
+- Babadan kaçmadığın sürede zaman cezası
+- Atmosferik hikaye anlatımı
+- 1920x1080 çözünürlükte desktop uygulaması
+- Modellemelerin %95'i kendi tasarımımız olup, referans çizimlerle oluşturulmuştur
+- API ile iletişime geçme
+- Unity analytics ile oyuncu datası toplama
+- 3D
 
 ### Prdouct Backlog URL
 [Link to Miro Board](https://miro.com/app/board/uXjVO5WhD9Y=/?share_link_id=529511586299)
